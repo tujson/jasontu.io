@@ -13,12 +13,9 @@ jQuery(function($) {
 	$(window).resize(function(){'use strict',
 		$('#home-slider .item').css('height',slideHeight);
 	});
-	
+
 	//Initiat WOW JS
 	new WOW().init();
-	//smoothScroll
-	smoothScroll.init();
 
-	
 });
 
