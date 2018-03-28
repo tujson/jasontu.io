@@ -19,19 +19,23 @@ body {
   background: #222;
   color: #fff;
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
+
 a {
   color: orange;
   text-decoration: none;
 }
+
 img {
   border: 0;
   vertical-align: middle;
 }
+
 h1 {
   line-height: 1em;
 }
+
 h2,
 .links {
   text-align: center;
