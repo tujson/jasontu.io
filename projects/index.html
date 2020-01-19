@@ -19,7 +19,9 @@
     </script>
     <script>
       function analyticsEvent(event) {
-        ga('send', 'event', event);
+        gtag('event', 'link', {
+          'event_label': event
+        });
       }
     </script>
   </head>
