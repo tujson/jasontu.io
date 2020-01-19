@@ -17,6 +17,11 @@
 
       gtag('config', 'UA-104229416-1');
     </script>
+    <script>
+      function analyticsEvent(event) {
+        ga('send', 'event', event);
+      }
+    </script>
   </head>
   <body style="font-family: 'Lato'">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -44,21 +49,21 @@
       <h1>Main</h1><br>
       <div class="row">
         <div class="col-sm-4" align="center">
-          <a href="https://jasontu.io/Yasny-LandingPage" target="_blank">
+          <a href="https://jasontu.io/Yasny-LandingPage" target="_blank" onClick="analyticsEvent('Yasny');">
             <img src="./Yasny/phone_frame.png" >
             <h3>Yasny</h3>
           </a>
           <p>List-based social media<br>Android</p>
         </div>
         <div class="col-sm-4" align="center">
-          <a href="https://synople.dev/sAudio/" target="_blank">
+          <a href="https://synople.dev/sAudio/" target="_blank" onClick="analyticsEvent('sAudio');">
             <img src="./sAudio/phone_frame.png" onmouseover="this.src='./sAudio/main.png'" onmouseout="this.src='./sAudio/phone_frame.png'">
             <h3>sAudio</h3>
           </a>
           <p>Listening to music in the 21st century</p>
         </div>
         <div class="col-sm-4" align="center">
-          <a href="./oneShare/index.html" target="_blank">
+          <a href="./oneShare/index.html" target="_blank" onClick="analyticsEvent('oneShare');">
             <img src="./oneShare/phone_frame.png" onmouseover="this.src='./oneShare/main.png'" onmouseout="this.src='./oneShare/phone_frame.png'">
             <h3>oneShare</h3>
           </a>
@@ -68,7 +73,9 @@
       <div class="row">
         <div class="col-sm-12" align="center">
           <img src="./Theory/logo.png" >
-          <h3><a href="https://theoryiot.com">Theory</a></h3>
+          <h3>
+            <a href="https://theoryiot.com" target="_blank" onClick="analyticsEvent('Theory');">Theory</a>
+          </h3>
           <p>IoT for Renters</p>
         </div>
       </div>
@@ -78,14 +85,14 @@
       <br><br>
       <div class="row">
         <div class="col-sm-6" align="center">
-          <a href="https://play.google.com/store/apps/details?id=io.synople.mideo" target="_blank">
+          <a href="https://play.google.com/store/apps/details?id=io.synople.mideo" target="_blank" onClick="analyticsEvent('Mideo');">
             <img src="./Mideo/logo.png" >
             <h3>Mideo</h3>
           </a>
           <p>Listen to music while recording video</p>
         </div>
         <div class="col-sm-6" align="center">
-          <a href="https://github.com/tujson/CSMusic" target="_blank">
+          <a href="https://github.com/tujson/CSMusic" target="_blank" onClick="analyticsEvent('CSMusic');">
             <img src="./CSMusic/logo.png" >
             <h3>CSMusic</h3>
           </a>
@@ -95,21 +102,21 @@
       <br><br><br>
       <div class="row">
       	<div class="col-sm-4" align="center">
-          <a href="https://github.com/tujson/Truffle-Android" target="_blank">
+          <a href="https://github.com/tujson/Truffle-Android" target="_blank" onClick="analyticsEvent('Truffle-Android');">
             <img src="./Truffle/logo.png" >
             <h3>Truffle</h3>
           </a>
           <p>A facial recognition point-of-sale</p>
         </div>
       	<div class="col-sm-4" align="center">
-          <a href="https://github.com/tujson/FlutterNews" target="_blank">
+          <a href="https://github.com/tujson/FlutterNews" target="_blank" onClick="analyticsEvent('FlutterNews');">
             <img src="./FlutterNews/logo.png" >
             <h3>FlutterNews</h3>
           </a>
           <p>Hacker News client in Flutter (Android & iOS)</p>
         </div>
         <div class="col-sm-4" align="center">
-          <a href="https://github.com/tujson/Scan" target="_blank">
+          <a href="https://github.com/tujson/Scan" target="_blank" onClick="analyticsEvent('Scan');">
             <img src="./Scan/logo.png" >
             <h3>$can</h3>
           </a>
@@ -120,7 +127,9 @@
       <div class="row">
         <div class="col-sm-4" align="center">
           <img src="./Bronze/logo.png" >
-          <h3><a href="https://github.com/tujson/Bronze-Android" target="_blank">Bronze</a></h3>
+          <h3>
+            <a href="https://github.com/tujson/Bronze-Android" target="_blank" onClick="analyticsEvent('Bronze-Android');">Bronze</a>
+          </h3>
           <p>An AR point-of-sale</p>
         </div>
         <div class="col-sm-4" align="center">
@@ -130,7 +139,7 @@
         </div>
         <div class="col-sm-4" align="center">
           <img src="./dayTrip/logo.png" >
-          <h3><a href="https://devpost.com/software/daytrip-w9h3qe" target="_blank">dayTrip</a></h3>
+          <h3><a href="https://devpost.com/software/daytrip-w9h3qe" target="_blank" onClick="analyticsEvent('dayTrip');">dayTrip</a></h3>
           <p>End-to-end trip planning</p>
         </div>
       </div>
@@ -138,7 +147,9 @@
       <div class="row">
         <div class="col-sm-4" align="center">
           <img src="./giphyr/logo.png" >
-          <h3><a href="https://devpost.com/software/giphyr" target="_blank">giphyr</a></h3>
+          <h3>
+            <a href="https://devpost.com/software/giphyr" target="_blank" onClick="analyticsEvent('giphyr');">giphyr</a>
+          </h3>
           <p>GIF-based social media</p>
         </div>
         <div class="col-sm-4" align="center">
@@ -148,7 +159,9 @@
         </div>
         <div class="col-sm-4" align="center">
           <img src="./Leash/logo.png" >
-          <h3><a href="https://devpost.com/software/leash-gctsd0" target="_blank">Leash</a></h3>
+          <h3>
+            <a href="https://devpost.com/software/leash-gctsd0" target="_blank" onClick="analyticsEvent('Leash');">Leash</a>
+          </h3>
           <p>Decentralized mesh Bluetooth network</p>
         </div>
       </div>

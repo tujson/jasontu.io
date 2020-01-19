@@ -17,6 +17,11 @@
 
 	  gtag('config', 'UA-104229416-1');
 	</script>
+	<script>
+		function analyticsEvent(event) {
+			ga('send', 'event', event);
+		}
+	</script>
   </head>
   <body style="font-family: 'Lato'">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -51,19 +56,19 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-4" align="center">
-            <a href="https://www.github.com/tujson" target="_blank">
+            <a href="https://www.github.com/tujson" target="_blank" onClick="analyticsEvent('GitHub');">
               	<i class="fa fa-github fa-2x" aria-hidden="true" style="color: #71B340;"></i>
             	<h2 style="color: #71B340;">GitHub</h2>
             </a>
         </div>
         <div class="col-md-4" align="center">
-            <a href="./resume.pdf" target="_blank">
+            <a href="./resume.pdf" target="_blank" onClick="analyticsEvent('Resume');">
               	<i class="fa fa-file fa-2x" aria-hidden="true" style="color: #71B340;"></i>
             	<h2 style="color: #71B340;">Resume</h2>
             </a>
         </div>
         <div class="col-md-4" align="center">
-            <a href="https://www.linkedin.com/in/tujson/" target="_blank">
+            <a href="https://www.linkedin.com/in/tujson/" target="_blank" onClick="analyticsEvent('LinkedIn');">
              	<i class="fa fa-linkedin-square fa-2x" aria-hidden="true" style="color: #71B340;"></i>
             	<h2 style="color: #71B340;">LinkedIn</h2> 
             </a>
