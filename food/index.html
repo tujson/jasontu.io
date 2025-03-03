@@ -103,9 +103,10 @@
 
     <div class="container-fluid no-padding" style="padding: 0">
       <div class="row" style="width: 100%; height: 94%">
+        </div>
         <div
           id="places"
-          class="col-sm-4"
+          class="col-md-4 order-md-1"
           align="start"
           style="
             overflow-y: scroll;
@@ -133,9 +134,6 @@
             </p>
           </div>
           <br /><br />
-        </div>
-        <div class="col-sm-8">
-          <div id="map"></div>
         </div>
       </div>
     </div>
@@ -374,7 +372,7 @@
               function isElementOnScreen(id) {
                 const element = document.getElementById(id);
                 const bounds = element.getBoundingClientRect();
-                return bounds.top < window.innerHeight && bounds.bottom > 200;
+                return bounds.top < window.innerHeight && bounds.bottom > 300;
               }
 
               document.getElementById("places").onscroll = () => {
