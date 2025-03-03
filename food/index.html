@@ -127,7 +127,10 @@
               average experience.<br />3 - Great option along the way.<br />4 -
               Worth a detour.<br />5 - Worth a dedicated journey.
             </p>
-            <p>My tastes are different from yours. Where tastes diverge, I'll seldom fight, where flavors soar, I'll shine the light.</p>
+            <p>
+              My tastes are different from yours. Where tastes diverge, I'll
+              seldom fight, where flavors soar, I'll shine the light.
+            </p>
           </div>
           <br /><br />
           <section id="old-mediterranean-kitchen" class="active">
@@ -320,17 +323,12 @@
 
     <script>
       const unobfuscateString = (str) =>
-        str.replace(/[a-zA-Z]/g, (c) =>
-          String.fromCharCode(
-            c.charCodeAt(0) - 1 >
-              (/[a-z]/.test(c) ? "a".charCodeAt(0) : "A".charCodeAt(0))
-              ? c.charCodeAt(0) - 1
-              : /[a-z]/.test(c)
-              ? "z".charCodeAt(0)
-              : "Z".charCodeAt(0)
-          )
-        );
-
+        str.replace(/[a-zA-Z]/g, (char) => {
+          const base = char <= "Z" ? 65 : 97;
+          return String.fromCharCode(
+            ((char.charCodeAt(0) - base - 1 + 26) % 26) + base
+          );
+        });
       mapboxgl.accessToken = unobfuscateString(
         "ql.fzK1JkpjeHm0cHWseXKwJjxjZTJ6JnOuO3OpNaKyOEGrbUVzcYF1eol3c292OEljgR.YWodvUIgTtL4BjMo5RmFWR"
       );
