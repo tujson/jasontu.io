@@ -329,10 +329,265 @@
       mapboxgl.accessToken = unobfuscateString(
         "ql.fzK1JkpjeHm0cHWseXKwJjxjZTJ6JnOuO3OpNaKyOEGrbUVzcYF1eol3c292OEljgR.YWodvUIgTtL4BjMo5RmFWR"
       );
+
+      function loadMultipleImages(map, imagePaths, callback) {
+        const imagePromises = [];
+        const imageNames = []; // Array to store extracted image names
+
+        for (let i = 0; i < imagePaths.length; i++) {
+          const imagePath = imagePaths[i];
+          const imagePathSplit = imagePath.split("/");
+          const imageFilename = imagePathSplit[imagePathSplit.length - 1];
+          const imageName = imageFilename.split(".")[0]; // Extract name
+          imageNames.push(imageName);
+
+          const promise = new Promise((resolve, reject) => {
+            map.loadImage(imagePath, (error, image) => {
+              if (error) {
+                reject(error);
+                return;
+              }
+              map.addImage(imageName, image);
+              resolve();
+            });
+          });
+          imagePromises.push(promise);
+        }
+
+        Promise.all(imagePromises)
+          .then(() => {
+            callback(imageNames); // Pass imageNames to the callback
+          })
+          .catch((error) => {
+            console.error("Error loading images:", error);
+          });
+      }
+
       const map = new mapboxgl.Map({
         container: "map",
         center: [-122.257, 47.618],
         zoom: 11,
+      });
+      map.on("load", () => {
+        loadMultipleImages(
+          map,
+          ["bar.png", "cafe.png", "confectionery.png", "restaurant.png"],
+          () => {
+            map.addSource("places", {
+              type: "geojson",
+              data: {
+                type: "FeatureCollection",
+                features: [
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "old-mediterranean-kitchen",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.2017444, 47.6113583],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "gilberts-on-main",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.20535254597318, 47.61030359852095],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "fern-thai-on-main",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.20460348377, 47.610372186057084],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "ginza",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.20417183947966, 47.609880733750956],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "520-bar-and-grill",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.20416111064422, 47.610341842686736],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "arayas-place-vegan-thai-bellevue",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.20241540071439, 47.61041979910802],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "monsoon-bellevue",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.20302117187717, 47.6100959184269],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "peony-kitchen-bellevue",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.20284919301244, 47.61007070715764],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "browne-family-vineyards-tasting-room",
+                      icon: "bar",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.20314676835696, 47.610061281584],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "dough-zone-dumpling-house-bellevue",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.20247536909802, 47.610357925556706],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "nanas-green-tea",
+                      icon: "cafe",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.20254815947432, 47.61062751055134],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "third-culture-coffee",
+                      icon: "cafe",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.2038936257962, 47.6108427064839],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "molly-moons-ice-cream",
+                      icon: "confectionery",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.20380980676923, 47.61062300424918],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "chawlas-cafe",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.2010450854983, 47.60984579869277],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "belle-pastry-french-bakery",
+                      icon: "cafe",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.20227124905351, 47.609979677931655],
+                    },
+                  },
+                  {
+                    type: "Feature",
+                    properties: {
+                      name: "bellden-cafe",
+                      icon: "cafe",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-122.1995085737966, 47.61001765168136],
+                    },
+                  },
+                ],
+              },
+            });
+            map.addLayer({
+              id: "places",
+              type: "symbol",
+              source: "places",
+              layout: {
+                "icon-image": ["coalesce", ["get", "icon"], "restaurant"],
+                "icon-size": 1.5,
+                "icon-allow-overlap": true,
+              },
+            });
+            map.on("click", "places", (e) => {
+              const coordinates = e.features[0].geometry.coordinates.slice();
+              const description = e.features[0].properties.name;
+
+              if (
+                ["mercator", "equirectangular"].includes(
+                  map.getProjection().name
+                )
+              ) {
+                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                  coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                }
+              }
+
+              document
+                .getElementById(e.features[0].properties.name)
+                .scrollIntoView();
+
+              new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+            });
+            map.on("mouseenter", "places", () => {
+              map.getCanvas().style.cursor = "pointer";
+            });
+            map.on("mouseleave", "places", () => {
+              map.getCanvas().style.cursor = "";
+            });
+          }
+        );
       });
 
       const places = {
