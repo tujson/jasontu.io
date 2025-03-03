@@ -206,9 +206,20 @@
               });
             }
 
+            const linksElement = document.createElement("div");
+            item.links.forEach((link) => {
+              const linkElement = document.createElement("a");
+              linkElement.href = link.value;
+              linkElement.textContent = link.name;
+              linkElement.target = "_blank";
+              linkElement.rel = "noopener noreferrer";
+              linksElement.append(linkElement);
+            });
+
             sectionElement.appendChild(nameElement);
             sectionElement.appendChild(descriptionElement);
             sectionElement.appendChild(personalElement);
+            sectionElement.appendChild(linksElement);
 
             document.getElementById("places").appendChild(sectionElement);
 
