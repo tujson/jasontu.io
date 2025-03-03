@@ -1,0 +1,418 @@
+<html>
+  <head>
+    <title>Jason Tu</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://use.fontawesome.com/deb6d0cd20.js"></script>
+
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js"></script>
+    <style>
+      #map {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BGNY90CHM3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-BGNY90CHM3");
+    </script>
+  </head>
+  <body style="font-family: 'Lato'">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#myNavbar"
+        aria-controls="myNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse flex-grow-1 text-right"
+        id="myNavbar"
+      >
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link m-2 menu-item nav-active"
+              >home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../experience/index.html" class="nav-link m-2 menu-item"
+              >experience</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../projects/index.html" class="nav-link m-2 menu-item"
+              >projects</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link m-2 menu-item"><strong>food</strong></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid no-padding" style="padding: 0">
+      <div class="row" style="width: 100%; height: 94%">
+        <div
+          id="places"
+          class="col-sm-4"
+          align="start"
+          style="
+            overflow-y: scroll;
+            height: 100%;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 20px;
+            padding-bottom: 700px;
+          "
+        >
+          <div>
+            <h2>Seattle Food</h2>
+            <p>
+              A collection of food experiences across Seattle and its
+              surrounding areas. Please, visit them all and form your own
+              opinions!
+            </p>
+          </div>
+          <br /><br /><br /><br />
+          <section id="old-mediterranean-kitchen" class="active">
+            <h3>Old Mediterranean Kitchen</h3>
+            <p>
+              A mainstay for downtown Bellevue, Old Mediterranean Kitchen
+              (formerly known as Mediterranean Kitchen) serves a consistently
+              flavorful meal each time with generous portions.
+            </p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: Q1 2025</p>
+
+              <p style="margin-bottom: 3px">Recommmended Dishes</p>
+              <ul class="list-group">
+                <li class="list-group-item">Farmer's Dish</li>
+                <li class="list-group-item">Dajaj Mishwi</li>
+                <li class="list-group-item">Beef Noodle</li>
+              </ul>
+            </div>
+
+            <a href="https://maps.app.goo.gl/c6qzRgoNz63yAhEB6">Maps</a>
+          </section>
+          <section id="gilberts-on-main" style="padding-top: 100px">
+            <h3>Gilbert's on Main</h3>
+            <p>Get the Reuben.</p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: Q1 2025</p>
+
+              <p style="margin-bottom: 3px">Recommmended Dishes</p>
+              <ul class="list-group">
+                <li class="list-group-item">The Reuben</li>
+              </ul>
+            </div>
+
+            <a href="https://maps.app.goo.gl/fR3jvpXaVf37ghvq9">Maps</a>
+          </section>
+          <section id="fern-thai-on-main" style="padding-top: 100px">
+            <h3>Fern Thai on Main</h3>
+            <p>Thai</p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: Q1 2025</p>
+
+              <p style="margin-bottom: 3px">Recommmended Dishes</p>
+              <ul class="list-group">
+                <li class="list-group-item">Roast Duck Curry</li>
+                <li class="list-group-item">Crab Fried Rice</li>
+              </ul>
+            </div>
+
+            <a href="https://maps.app.goo.gl/NYvzr4W2MUES9mH2A">Maps</a>
+          </section>
+          <section id="ginza" style="padding-top: 100px">
+            <h3>Ginza</h3>
+            <p>A hole-in-the-wall Japanese restaurant.</p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: 2024</p>
+
+              <p style="margin-bottom: 3px">Recommmended Dishes</p>
+              <ul class="list-group"></ul>
+            </div>
+
+            <a href="https://maps.app.goo.gl/qM86VAkuxBJhmbDX7">Maps</a>
+          </section>
+          <section id="520-bar-and-grill" style="padding-top: 100px">
+            <h3>520 Bar & Grill</h3>
+            <p>A well-situated restaurant with the usual bar fare.</p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: 2023</p>
+            </div>
+
+            <a href="https://maps.app.goo.gl/WSxXGvAQLMDvDnZJ8">Maps</a>
+          </section>
+          <section
+            id="arayas-place-vegan-thai-bellevue"
+            style="padding-top: 100px"
+          >
+            <h3>Araya's Place Vegan Thai Bellevue</h3>
+            <p>Vegan thai</p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: Q4 2024</p>
+            </div>
+
+            <a href="https://maps.app.goo.gl/PG57FWg6NJ6PagGD78">Maps</a>
+          </section>
+          <section id="monsoon-bellevue" style="padding-top: 100px">
+            <h3>Monsoon Bellevue</h3>
+            <p>Vietnamese</p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: Q4 2024</p>
+            </div>
+
+            <a href="https://maps.app.goo.gl/LsQ9x7bd4EFQviEw6">Maps</a>
+          </section>
+          <section id="peony-kitchen-bellevue" style="padding-top: 100px">
+            <h3>Penoy Kitchen Bellevue</h3>
+            <p>Chinese American</p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: Q1 2025</p>
+            </div>
+
+            <a href="https://maps.app.goo.gl/y2uUjnJLGPt8SjAq6">Maps</a>
+          </section>
+          <section
+            id="browne-family-vineyards-tasting-room"
+            style="padding-top: 100px"
+          >
+            <h3>Browne Family Vineyards Tasting Room</h3>
+            <p>Wine + Whisky</p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: Q1 2025</p>
+            </div>
+
+            <a href="https://maps.app.goo.gl/Dk3LYe8MWrYKoXap7">Maps</a>
+          </section>
+          <section
+            id="dough-zone-dumpling-house-bellevue"
+            style="padding-top: 100px"
+          >
+            <h3>Dough Zone Dumpling House Bellevue</h3>
+            <p>Stuff</p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: 2023</p>
+            </div>
+
+            <a href="https://maps.app.goo.gl/5bceBJCJHQRWpwXMA">Maps</a>
+          </section>
+          <section id="nanas-green-tea" style="padding-top: 100px">
+            <h3>Nana's Green Tea</h3>
+            <p>
+              Different types of matcha available. Check for seasonal
+              specialties!
+            </p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: Q1 2025</p>
+            </div>
+
+            <a href="https://maps.app.goo.gl/WVbZtYYzsaKyhVvP6">Maps</a>
+          </section>
+          <section id="third-culture-coffee" style="padding-top: 100px">
+            <h3>Third Culture Coffee</h3>
+            <p>A</p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: Q1 2025</p>
+            </div>
+
+            <a href="https://maps.app.goo.gl/92VEyjHN2m5z8pkc7">Maps</a>
+          </section>
+          <section id="molly-moons-ice-cream" style="padding-top: 100px">
+            <h3>Molly Moon's Ice Cream</h3>
+            <p>A</p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: Q4 2024</p>
+            </div>
+
+            <a href="https://maps.app.goo.gl/nqEZYJkyw6w8Xtnp7">Maps</a>
+          </section>
+          <section id="chawlas-cafe" style="padding-top: 100px">
+            <h3>Chawla's Cafe</h3>
+            <p>Stuff</p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: Q4 2024</p>
+            </div>
+
+            <a href="https://maps.app.goo.gl/ANbW112Wzev615ND7">Maps</a>
+          </section>
+          <section id="belle-pastry-french-bakery" style="padding-top: 100px">
+            <h3>Belle Pastry French Bakery</h3>
+            <p>Stuff</p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: 2022</p>
+            </div>
+
+            <a href="https://maps.app.goo.gl/GsAcziaC3MXgeY7VA">Maps</a>
+          </section>
+          <section id="bellden-cafe" style="padding-top: 100px">
+            <h3>Bellden Cafe</h3>
+            <p>Stuff</p>
+            <div class="border" style="padding: 10px">
+              <p style="margin-bottom: 5px">Last visit: 2021</p>
+            </div>
+
+            <a href="https://maps.app.goo.gl/Z3zdpti9rWWnymX67">Maps</a>
+          </section>
+        </div>
+        <div class="col-sm-8">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    const unobfuscateString = (str) => str.replace(/[a-zA-Z]/g, c => String.fromCharCode(c.charCodeAt(0) - 1 > (/[a-z]/.test(c) ? 'a'.charCodeAt(0) : 'A'.charCodeAt(0)) ? c.charCodeAt(0) - 1 : (/[a-z]/.test(c) ? 'z'.charCodeAt(0) : 'Z'.charCodeAt(0))));
+
+      mapboxgl.accessToken =
+        unobfuscateString("ql.fzK1JkpjeHm0cHWseXKwJjxjZTJ6JnOuO3OpNaKyOEGrbUVzcYF1eol3c292OEljgR.YWodvUIgTtL4BjMo5RmFWR");
+      const map = new mapboxgl.Map({
+        container: "map",
+        center: [-122.257, 47.618],
+        zoom: 11,
+      });
+
+      const places = {
+        "old-mediterranean-kitchen": {
+          bearing: -45,
+          center: [-122.2017444, 47.6113583],
+        },
+        "gilberts-on-main": {
+          center: [-122.20535254597318, 47.61030359852095],
+        },
+        "fern-thai-on-main": {
+          center: [-122.20460348377, 47.610372186057084],
+        },
+        ginza: {
+          center: [-122.20417183947966, 47.609880733750956],
+        },
+        "520-bar-and-grill": {
+          center: [-122.20416111064422, 47.610341842686736],
+        },
+        "arayas-place-vegan-thai-bellevue": {
+          center: [-122.20241540071439, 47.61041979910802],
+        },
+        "monsoon-bellevue": {
+          center: [-122.20302117187717, 47.6100959184269],
+        },
+        "peony-kitchen-bellevue": {
+          center: [-122.20284919301244, 47.61007070715764],
+        },
+        "browne-family-vineyards-tasting-room": {
+          center: [-122.20314676835696, 47.610061281584],
+        },
+        "dough-zone-dumpling-house-bellevue": {
+          center: [-122.20247536909802, 47.610357925556706],
+        },
+        "nanas-green-tea": {
+          bearing: -90,
+          center: [-122.20254815947432, 47.61062751055134],
+        },
+        "third-culture-coffee": {
+          bearing: -90,
+          center: [-122.2038936257962, 47.6108427064839],
+        },
+        "molly-moons-ice-cream": {
+          bearing: -90,
+          center: [-122.20380980676923, 47.61062300424918],
+        },
+        "chawlas-cafe": {
+          bearing: -90,
+          center: [-122.2010450854983, 47.60984579869277],
+        },
+        "belle-pastry-french-bakery": {
+          center: [-122.20227124905351, 47.609979677931655],
+        },
+        "bellden-cafe": {
+          center: [-122.1995085737966, 47.61001765168136],
+        },
+      };
+
+      let activePlaceName = "";
+      function setActivePlace(placeName) {
+        if (placeName === activePlaceName) return;
+
+        map.flyTo({
+          bearing:
+            places[placeName]["bearing"] === undefined
+              ? 0
+              : places[placeName]["bearing"],
+          center: places[placeName]["center"],
+          zoom:
+            places[placeName]["zoom"] === undefined
+              ? 18
+              : places[placeName]["zoom"],
+          pitch: 60,
+        });
+
+        document.getElementById(placeName).classList.add("active");
+        document.getElementById(activePlaceName).classList.remove("active");
+
+        activePlaceName = placeName;
+      }
+
+      function isElementOnScreen(id) {
+        const element = document.getElementById(id);
+        const bounds = element.getBoundingClientRect();
+        return bounds.top < window.innerHeight && bounds.bottom > 200;
+      }
+      console.log("a");
+
+      // On every scroll event, check which element is on screen
+      document.getElementById("places").onscroll = () => {
+        console.log("windowonscrolll");
+        for (const placeName in places) {
+          if (isElementOnScreen(placeName)) {
+            setActivePlace(placeName);
+            break;
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
