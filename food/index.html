@@ -116,7 +116,7 @@
             padding-bottom: 700px;
           "
         >
-          <div>
+          <div id="root">
             <h2>Seattle Food</h2>
             <p>
               A collection of food experiences across Seattle and its
@@ -169,205 +169,223 @@
         .then((response) => response.json())
         .then((allData) => {
           const data = allData["bellevue"];
-          data.forEach((item) => {
-            const sectionElement = document.createElement("section");
-            sectionElement.id = item.name;
+          data
+            .filter((item) => item["name"] !== "root")
+            .forEach((item) => {
+              const sectionElement = document.createElement("section");
+              sectionElement.id = item.name;
 
-            const nameElement = document.createElement("h3");
-            nameElement.textContent = item.name;
+              const nameElement = document.createElement("h3");
+              nameElement.textContent = item.name;
 
-            const descriptionElement = document.createElement("p");
-            descriptionElement.textContent = item.description;
+              const descriptionElement = document.createElement("p");
+              descriptionElement.textContent = item.description;
 
-            const personalElement = document.createElement("div");
-            personalElement.className = "border";
-            personalElement.style.padding = "10px";
+              const personalElement = document.createElement("div");
+              personalElement.className = "border";
+              personalElement.style.padding = "10px";
 
-            const lastVisitElement = document.createElement("p");
-            lastVisitElement.style.marginBottom = "5px";
-            lastVisitElement.textContent = "Last visit: Q1 2025";
-            personalElement.appendChild(lastVisitElement);
+              const lastVisitElement = document.createElement("p");
+              lastVisitElement.style.marginBottom = "5px";
+              lastVisitElement.textContent = "Last visit: Q1 2025";
+              personalElement.appendChild(lastVisitElement);
 
-            if (item.recommended !== undefined && item.recommended.length > 0) {
-              const recommendedElement = document.createElement("p");
-              recommendedElement.style.marginBottom = "3px";
-              recommendedElement.textContent = "Recommended Dishes";
-              personalElement.appendChild(recommendedElement);
+              if (
+                item.recommended !== undefined &&
+                item.recommended.length > 0
+              ) {
+                const recommendedElement = document.createElement("p");
+                recommendedElement.style.marginBottom = "3px";
+                recommendedElement.textContent = "Recommended Dishes";
+                personalElement.appendChild(recommendedElement);
 
-              const recommendations = document.createElement("ul");
-              recommendations.className = "list-group";
-              personalElement.appendChild(recommendations);
+                const recommendations = document.createElement("ul");
+                recommendations.className = "list-group";
+                personalElement.appendChild(recommendations);
 
-              item.recommended.forEach((recommendedItem) => {
-                const li = document.createElement("li");
-                li.className = "list-group-item";
-                li.textContent = recommendedItem;
-                recommendations.appendChild(li);
+                item.recommended.forEach((recommendedItem) => {
+                  const li = document.createElement("li");
+                  li.className = "list-group-item";
+                  li.textContent = recommendedItem;
+                  recommendations.appendChild(li);
+                });
+              }
+
+              const linksElement = document.createElement("div");
+              item.links.forEach((link) => {
+                const linkElement = document.createElement("a");
+                linkElement.href = link.value;
+                linkElement.textContent = link.name;
+                linkElement.target = "_blank";
+                linkElement.rel = "noopener noreferrer";
+                linksElement.append(linkElement);
               });
-            }
 
-            const linksElement = document.createElement("div");
-            item.links.forEach((link) => {
-              const linkElement = document.createElement("a");
-              linkElement.href = link.value;
-              linkElement.textContent = link.name;
-              linkElement.target = "_blank";
-              linkElement.rel = "noopener noreferrer";
-              linksElement.append(linkElement);
-            });
+              sectionElement.appendChild(nameElement);
+              sectionElement.appendChild(descriptionElement);
+              sectionElement.appendChild(personalElement);
+              sectionElement.appendChild(linksElement);
 
-            sectionElement.appendChild(nameElement);
-            sectionElement.appendChild(descriptionElement);
-            sectionElement.appendChild(personalElement);
-            sectionElement.appendChild(linksElement);
+              document.getElementById("places").appendChild(sectionElement);
 
-            document.getElementById("places").appendChild(sectionElement);
+              const unobfuscateString = (str) =>
+                str.replace(/[a-zA-Z]/g, (char) => {
+                  const base = char <= "Z" ? 65 : 97;
+                  return String.fromCharCode(
+                    ((char.charCodeAt(0) - base - 1 + 26) % 26) + base
+                  );
+                });
+              mapboxgl.accessToken = unobfuscateString(
+                "ql.fzK1JkpjeHm0cHWseXKwJjxjZTJ6JnOuO3OpNAKyOEGrbUVzcYF1eol3c292OEljgR.YWodvUIgTtL4BjMo5RmFWR"
+              );
 
-            const unobfuscateString = (str) =>
-              str.replace(/[a-zA-Z]/g, (char) => {
-                const base = char <= "Z" ? 65 : 97;
-                return String.fromCharCode(
-                  ((char.charCodeAt(0) - base - 1 + 26) % 26) + base
+              function loadMultipleImages(map, imagePaths, callback) {
+                const imagePromises = [];
+                const imageNames = []; // Array to store extracted image names
+
+                for (let i = 0; i < imagePaths.length; i++) {
+                  const imagePath = imagePaths[i];
+                  const imagePathSplit = imagePath.split("/");
+                  const imageFilename =
+                    imagePathSplit[imagePathSplit.length - 1];
+                  const imageName = imageFilename.split(".")[0]; // Extract name
+                  imageNames.push(imageName);
+
+                  const promise = new Promise((resolve, reject) => {
+                    map.loadImage(imagePath, (error, image) => {
+                      if (error) {
+                        reject(error);
+                        return;
+                      }
+                      map.addImage(imageName, image);
+                      resolve();
+                    });
+                  });
+                  imagePromises.push(promise);
+                }
+
+                Promise.all(imagePromises)
+                  .then(() => {
+                    callback(imageNames);
+                  })
+                  .catch((error) => {
+                    console.error("Error loading images:", error);
+                  });
+              }
+
+              const map = new mapboxgl.Map({
+                container: "map",
+                center: [-122.202, 47.612],
+                zoom: 16,
+              });
+              map.on("load", () => {
+                loadMultipleImages(
+                  map,
+                  [
+                    "bar.png",
+                    "cafe.png",
+                    "confectionery.png",
+                    "restaurant.png",
+                  ],
+                  () => {
+                    map.addSource("places", {
+                      type: "geojson",
+                      data: convertToGeoJSON(data),
+                    });
+                    map.addLayer({
+                      id: "places",
+                      type: "symbol",
+                      source: "places",
+                      layout: {
+                        "icon-image": [
+                          "coalesce",
+                          ["get", "icon"],
+                          "restaurant",
+                        ],
+                        "icon-size": 1.5,
+                        "icon-allow-overlap": true,
+                      },
+                    });
+                    map.on("click", "places", (e) => {
+                      const coordinates =
+                        e.features[0].geometry.coordinates.slice();
+                      const description = e.features[0].properties.name;
+
+                      if (
+                        ["mercator", "equirectangular"].includes(
+                          map.getProjection().name
+                        )
+                      ) {
+                        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                          coordinates[0] +=
+                            e.lngLat.lng > coordinates[0] ? 360 : -360;
+                        }
+                      }
+
+                      document
+                        .getElementById(e.features[0].properties.name)
+                        .scrollIntoView();
+
+                      new mapboxgl.Popup()
+                        .setLngLat(coordinates)
+                        .setHTML(description)
+                        .addTo(map);
+                    });
+                    map.on("mouseenter", "places", () => {
+                      map.getCanvas().style.cursor = "pointer";
+                    });
+                    map.on("mouseleave", "places", () => {
+                      map.getCanvas().style.cursor = "";
+                    });
+                  }
                 );
               });
-            mapboxgl.accessToken = unobfuscateString(
-              "ql.fzK1JkpjeHm0cHWseXKwJjxjZTJ6JnOuO3OpNAKyOEGrbUVzcYF1eol3c292OEljgR.YWodvUIgTtL4BjMo5RmFWR"
-            );
 
-            function loadMultipleImages(map, imagePaths, callback) {
-              const imagePromises = [];
-              const imageNames = []; // Array to store extracted image names
+              let activePlaceName = "";
+              function setActivePlace(place) {
+                if (place["name"] === activePlaceName) return;
 
-              for (let i = 0; i < imagePaths.length; i++) {
-                const imagePath = imagePaths[i];
-                const imagePathSplit = imagePath.split("/");
-                const imageFilename = imagePathSplit[imagePathSplit.length - 1];
-                const imageName = imageFilename.split(".")[0]; // Extract name
-                imageNames.push(imageName);
-
-                const promise = new Promise((resolve, reject) => {
-                  map.loadImage(imagePath, (error, image) => {
-                    if (error) {
-                      reject(error);
-                      return;
-                    }
-                    map.addImage(imageName, image);
-                    resolve();
-                  });
+                map.flyTo({
+                  bearing:
+                    place["location"]["bearing"] === undefined
+                      ? 0
+                      : place["location"]["bearing"],
+                  center: place["location"]["coordinates"],
+                  zoom:
+                    place["location"]["zoom"] === undefined
+                      ? 18
+                      : place["location"]["zoom"],
+                  pitch:
+                    place["location"]["pitch"] === undefined
+                      ? 60
+                      : place["location"]["pitch"],
                 });
-                imagePromises.push(promise);
-              }
 
-              Promise.all(imagePromises)
-                .then(() => {
-                  callback(imageNames);
-                })
-                .catch((error) => {
-                  console.error("Error loading images:", error);
-                });
-            }
-
-            const map = new mapboxgl.Map({
-              container: "map",
-              center: [-122.202, 47.612],
-              zoom: 16,
-            });
-            map.on("load", () => {
-              loadMultipleImages(
-                map,
-                ["bar.png", "cafe.png", "confectionery.png", "restaurant.png"],
-                () => {
-                  map.addSource("places", {
-                    type: "geojson",
-                    data: convertToGeoJSON(data),
-                  });
-                  map.addLayer({
-                    id: "places",
-                    type: "symbol",
-                    source: "places",
-                    layout: {
-                      "icon-image": ["coalesce", ["get", "icon"], "restaurant"],
-                      "icon-size": 1.5,
-                      "icon-allow-overlap": true,
-                    },
-                  });
-                  map.on("click", "places", (e) => {
-                    const coordinates =
-                      e.features[0].geometry.coordinates.slice();
-                    const description = e.features[0].properties.name;
-
-                    if (
-                      ["mercator", "equirectangular"].includes(
-                        map.getProjection().name
-                      )
-                    ) {
-                      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                        coordinates[0] +=
-                          e.lngLat.lng > coordinates[0] ? 360 : -360;
-                      }
-                    }
-
-                    document
-                      .getElementById(e.features[0].properties.name)
-                      .scrollIntoView();
-
-                    new mapboxgl.Popup()
-                      .setLngLat(coordinates)
-                      .setHTML(description)
-                      .addTo(map);
-                  });
-                  map.on("mouseenter", "places", () => {
-                    map.getCanvas().style.cursor = "pointer";
-                  });
-                  map.on("mouseleave", "places", () => {
-                    map.getCanvas().style.cursor = "";
-                  });
+                document.getElementById(place["name"]).classList.add("active");
+                if (activePlaceName !== "") {
+                  document
+                    .getElementById(activePlaceName)
+                    .classList.remove("active");
                 }
-              );
-            });
 
-            let activePlaceName = "";
-            function setActivePlace(place) {
-              if (place["name"] === activePlaceName) return;
-
-              map.flyTo({
-                bearing:
-                  place["location"]["bearing"] === undefined
-                    ? 0
-                    : place["location"]["bearing"],
-                center: place["location"]["coordinates"],
-                zoom:
-                  place["location"]["zoom"] === undefined
-                    ? 18
-                    : place["location"]["zoom"],
-                pitch: 60,
-              });
-
-              document.getElementById(place["name"]).classList.add("active");
-              if (activePlaceName !== "") {
-                document
-                  .getElementById(activePlaceName)
-                  .classList.remove("active");
+                activePlaceName = place["name"];
               }
 
-              activePlaceName = place["name"];
-            }
+              function isElementOnScreen(id) {
+                const element = document.getElementById(id);
+                const bounds = element.getBoundingClientRect();
+                return bounds.top < window.innerHeight && bounds.bottom > 200;
+              }
 
-            function isElementOnScreen(id) {
-              const element = document.getElementById(id);
-              const bounds = element.getBoundingClientRect();
-              return bounds.top < window.innerHeight && bounds.bottom > 200;
-            }
-
-            document.getElementById("places").onscroll = () => {
-              for (const place of data) {
-                if (isElementOnScreen(place["name"])) {
-                  setActivePlace(place);
-                  break;
+              document.getElementById("places").onscroll = () => {
+                for (const place of data) {
+                  if (isElementOnScreen(place["name"])) {
+                    setActivePlace(place);
+                    break;
+                  }
                 }
-              }
-            };
-          });
+              };
+            });
         });
     </script>
   </body>

@@ -1,6 +1,15 @@
 {
   "bellevue": [
     {
+      "name": "root",
+      "location": {
+        "coordinates": [-122.202, 47.612],
+        "bearing": 0,
+        "pitch": 0,
+        "zoom": 16
+      }
+    },
+    {
       "name": "Old Mediterranean Kitchen",
       "description": "A mainstay for downtown Bellevue, Old Mediterranean Kitchen (formerly known as Mediterranean Kitchen) serves a consistently flavorful meal each time with generous portions.",
       "rating": 5,
@@ -103,7 +112,7 @@
         }
       ],
       "location": {
-        "coordinates":[-122.20241540071439, 47.61041979910802],
+        "coordinates": [-122.20241540071439, 47.61041979910802],
         "bearing": "",
         "icon": "restaurant"
       }
@@ -211,29 +220,29 @@
         }
       ],
       "location": {
-        "coordinates":  [-122.2038936257962, 47.6108427064839],
+        "coordinates": [-122.2038936257962, 47.6108427064839],
         "bearing": "",
         "icon": "cafe"
       }
     },
     {
-        "name": "Molly Moon's Ice Cream",
-        "description": "",
-        "rating": 5,
-        "lastVisit": "Q1 2025",
-        "recommended": [],
-        "links": [
-          {
-            "name": "Google Maps",
-            "value": "https://maps.app.goo.gl/92VEyjHN2m5z8pkc7"
-          }
-        ],
-        "location": {
-          "coordinates":   [-122.20380980676923, 47.61062300424918],
-          "bearing": "",
-          "icon": "confectionery"
+      "name": "Molly Moon's Ice Cream",
+      "description": "",
+      "rating": 5,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/92VEyjHN2m5z8pkc7"
         }
-      },
+      ],
+      "location": {
+        "coordinates": [-122.20380980676923, 47.61062300424918],
+        "bearing": "",
+        "icon": "confectionery"
+      }
+    },
     {
       "name": "Chawla's Cafe",
       "description": "",
