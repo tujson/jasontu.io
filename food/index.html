@@ -37,6 +37,13 @@
         height: 100%;
         width: 100%;
       }
+      section {
+        padding-top: 100px;
+        opacity: 0.25;
+      }
+      section.active {
+        opacity: 1;
+      }
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -307,10 +314,21 @@
     </div>
 
     <script>
-    const unobfuscateString = (str) => str.replace(/[a-zA-Z]/g, c => String.fromCharCode(c.charCodeAt(0) - 1 > (/[a-z]/.test(c) ? 'a'.charCodeAt(0) : 'A'.charCodeAt(0)) ? c.charCodeAt(0) - 1 : (/[a-z]/.test(c) ? 'z'.charCodeAt(0) : 'Z'.charCodeAt(0))));
+      const unobfuscateString = (str) =>
+        str.replace(/[a-zA-Z]/g, (c) =>
+          String.fromCharCode(
+            c.charCodeAt(0) - 1 >
+              (/[a-z]/.test(c) ? "a".charCodeAt(0) : "A".charCodeAt(0))
+              ? c.charCodeAt(0) - 1
+              : /[a-z]/.test(c)
+              ? "z".charCodeAt(0)
+              : "Z".charCodeAt(0)
+          )
+        );
 
-      mapboxgl.accessToken =
-        unobfuscateString("ql.fzK1JkpjeHm0cHWseXKwJjxjZTJ6JnOuO3OpNaKyOEGrbUVzcYF1eol3c292OEljgR.YWodvUIgTtL4BjMo5RmFWR");
+      mapboxgl.accessToken = unobfuscateString(
+        "ql.fzK1JkpjeHm0cHWseXKwJjxjZTJ6JnOuO3OpNaKyOEGrbUVzcYF1eol3c292OEljgR.YWodvUIgTtL4BjMo5RmFWR"
+      );
       const map = new mapboxgl.Map({
         container: "map",
         center: [-122.257, 47.618],
@@ -391,7 +409,9 @@
         });
 
         document.getElementById(placeName).classList.add("active");
-        document.getElementById(activePlaceName).classList.remove("active");
+        if (activePlaceName !== "") {
+          document.getElementById(activePlaceName).classList.remove("active");
+        }
 
         activePlaceName = placeName;
       }
@@ -401,7 +421,6 @@
         const bounds = element.getBoundingClientRect();
         return bounds.top < window.innerHeight && bounds.bottom > 200;
       }
-      console.log("a");
 
       // On every scroll event, check which element is on screen
       document.getElementById("places").onscroll = () => {
