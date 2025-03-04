@@ -10,8 +10,243 @@
       }
     },
     {
+      "name": "520 Bar & Grill",
+      "description": "A well-situated restaurant with a nice patio and good hours (at least, for Bellevue). The food leaves a little bit to be desired,. nothing stands out.",
+      "rating": 2,
+      "lastVisit": "2022",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/WSxXGvAQLMDvDnZJ8"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20416111064422, 47.610341842686736],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+
+    {
+      "name": "Araya's Place Vegan Thai Bellevue",
+      "description": "I'm not one for vegetarian food, much less vegan. But Araya's is the exception. I didn't realize this place was vegan until my third time. Just like the staff say, give it a try.",
+      "rating": 3,
+      "lastVisit": "Q4 2024",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/PG57FWg6NJ6PagGD78"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20241540071439, 47.61041979910802],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Bellden Cafe",
+      "description": "",
+      "rating": 1,
+      "lastVisit": "2021",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/Z3zdpti9rWWnymX67"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.1995085737966, 47.61001765168136],
+        "bearing": "",
+        "icon": "cafe"
+      }
+    },
+    {
+      "name": "Belle Pastry French Bakery",
+      "description": "",
+      "rating": 1,
+      "lastVisit": "2022",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/GsAcziaC3MXgeY7VA"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20227124905351, 47.609979677931655],
+        "bearing": "",
+        "icon": "cafe"
+      }
+    },
+    {
+      "name": "Browne Family Vineyards Tasting Room",
+      "description": "A Washington-establishment's Bellevue outpost, Browne Family Vineyards offers quintessentially Washington full-bodied red wines. Their tasting flights and pairings make wine tastings more accessible, with whisky for those who prefer something stronger.",
+      "rating": 4,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/Dk3LYe8MWrYKoXap7"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20314676835696, 47.610061281584],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Chawla's Cafe",
+      "description": "",
+      "rating": 1,
+      "lastVisit": "Q4 2024",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/ANbW112Wzev615ND7"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.2010450854983, 47.60984579869277],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Dough Zone Dumpling House Bellevue",
+      "description": "",
+      "rating": 1,
+      "lastVisit": "2022",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/5bceBJCJHQRWpwXMA"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20247536909802, 47.610357925556706],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Fern Thai on Main",
+      "description": "There's at least one chef here who understands 鍋氣 (guōqì), when food kisses the fire that leaps over a wok's edge. The Crab Fried Rice and Roast Duck Curry stand above the other dishes in both flavor and composition. Their Pad Thai is interesting, but more memorable for its banana leaf.",
+      "rating": 4,
+      "lastVisit": "Q1 2025",
+      "recommended": ["Roast Duck Curry", "Crab Fried Rice"],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/NYvzr4W2MUES9mH2A"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20460348377, 47.610372186057084],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Gilbert's on Main",
+      "description": "Every time I get \"The Reuben (#9)\". They've got other stuff on the menu I really should try, but the layers of pastrami and corned beef call my name. The included potato salad and pickle are almost mandatory to cut through the sandwich, and you'll be hard pressed to finish even the Seattle-style half-portion in one sitting.",
+      "rating": 4,
+      "lastVisit": "Q1 2025",
+      "recommended": ["The Reuben (#9)"],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/fR3jvpXaVf37ghvq9"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20535254597318, 47.61030359852095],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Ginza",
+      "description": "A hole-in-the-wall Japanese restaurant. I need to explore its menu a bit more. There's potential here, with a menu that offers traditional Japanese dishes not seen at bigger establishments.",
+      "rating": 2,
+      "lastVisit": "Q3 2024",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/qM86VAkuxBJhmbDX7"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20417183947966, 47.609880733750956],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Molly Moon's Ice Cream",
+      "description": "",
+      "rating": 2,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/92VEyjHN2m5z8pkc7"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20380980676923, 47.61062300424918],
+        "bearing": "",
+        "icon": "confectionery"
+      }
+    },
+    {
+      "name": "Monsoon Bellevue",
+      "description": "",
+      "rating": 2,
+      "lastVisit": "Q4 2024",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/LsQ9x7bd4EFQviEw6"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20302117187717, 47.6100959184269],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Nana's Green Tea",
+      "description": " Different types of matcha available. Check for seasonal specialties!",
+      "rating": 3,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/WVbZtYYzsaKyhVvP6"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20254815947432, 47.61062751055134],
+        "bearing": "",
+        "icon": "cafe"
+      }
+    },
+    {
       "name": "Old Mediterranean Kitchen",
-      "description": "A mainstay for downtown Bellevue, Old Mediterranean Kitchen (formerly known as Mediterranean Kitchen) serves a consistently flavorful meal each time with generous portions.",
+      "description": "A mainstay for downtown Bellevue, Old Mediterranean Kitchen (formerly known as Mediterranean Kitchen) serves a consistently flavorful meal with generous portions.",
       "rating": 5,
       "lastVisit": "Q1 2025",
       "recommended": ["Farmers Dish", "Dajaj Mishwi", "Beef Noodle"],
@@ -28,119 +263,29 @@
       }
     },
     {
-      "name": "Gilbert's on Main",
-      "description": "",
-      "rating": 5,
-      "lastVisit": "Q1 2025",
-      "recommended": ["The Reuben"],
-      "links": [
-        {
-          "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/fR3jvpXaVf37ghvq9"
-        }
-      ],
-      "location": {
-        "coordinates": [-122.20535254597318, 47.61030359852095],
-        "bearing": "",
-        "icon": "restaurant"
-      }
-    },
-    {
-      "name": "Fern Thai on Main",
-      "description": "",
-      "rating": 5,
-      "lastVisit": "",
-      "recommended": ["Roast Duck Curry", "Crab Fried Rice"],
-      "links": [
-        {
-          "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/NYvzr4W2MUES9mH2A"
-        }
-      ],
-      "location": {
-        "coordinates": [-122.20460348377, 47.610372186057084],
-        "bearing": "",
-        "icon": "restaurant"
-      }
-    },
-    {
-      "name": "Ginza",
-      "description": "A hole-in-the-wall Japanese restaurant.",
-      "rating": 5,
-      "lastVisit": "Q3 2024",
-      "recommended": [],
-      "links": [
-        {
-          "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/qM86VAkuxBJhmbDX7"
-        }
-      ],
-      "location": {
-        "coordinates": [-122.20417183947966, 47.609880733750956],
-        "bearing": "",
-        "icon": "restaurant"
-      }
-    },
-    {
-      "name": "520 Bar & Grill",
-      "description": "",
-      "rating": 5,
-      "lastVisit": "2023",
-      "recommended": [],
-      "links": [
-        {
-          "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/WSxXGvAQLMDvDnZJ8"
-        }
-      ],
-      "location": {
-        "coordinates": [-122.20416111064422, 47.610341842686736],
-        "bearing": "",
-        "icon": "restaurant"
-      }
-    },
-    {
-      "name": "Araya's Place Vegan Thai Bellevue",
-      "description": "",
-      "rating": 5,
+      "name": "Pagliacci Pizza",
+      "description": "The Seattle \"chain\" pizza shop. It's better than your usual takeout pizza, but nothing to write home about",
+      "rating": 3,
       "lastVisit": "Q4 2024",
       "recommended": [],
       "links": [
         {
           "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/PG57FWg6NJ6PagGD78"
+          "value": "https://maps.app.goo.gl/4Pyg91TsNuWiDKZo7"
         }
       ],
       "location": {
-        "coordinates": [-122.20241540071439, 47.61041979910802],
-        "bearing": "",
-        "icon": "restaurant"
-      }
-    },
-    {
-      "name": "Monsoon Bellevue",
-      "description": "",
-      "rating": 5,
-      "lastVisit": "Q4 2024",
-      "recommended": [],
-      "links": [
-        {
-          "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/LsQ9x7bd4EFQviEw6"
-        }
-      ],
-      "location": {
-        "coordinates": [-122.20302117187717, 47.6100959184269],
+        "coordinates": [-122.19832780280585, 47.610408893340335],
         "bearing": "",
         "icon": "restaurant"
       }
     },
     {
       "name": "Peony Kitchen Bellevue",
-      "description": "",
-      "rating": 5,
+      "description": "A decidedly Chinese American establishment, Peony offers good quality ingredients but for a more Americanized palate.",
+      "rating": 3,
       "lastVisit": "Q1 2025",
-      "recommended": [],
+      "recommended": ["Spicy Crispy Fish Filet", "Firecracker Chicken"],
       "links": [
         {
           "name": "Google Maps",
@@ -154,63 +299,9 @@
       }
     },
     {
-      "name": "Browne Family Vineyards Tasting Room",
-      "description": "",
-      "rating": 5,
-      "lastVisit": "Q1 2025",
-      "recommended": [],
-      "links": [
-        {
-          "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/Dk3LYe8MWrYKoXap7"
-        }
-      ],
-      "location": {
-        "coordinates": [-122.20314676835696, 47.610061281584],
-        "bearing": "",
-        "icon": "restaurant"
-      }
-    },
-    {
-      "name": "Dough Zone Dumpling House Bellevue",
-      "description": "",
-      "rating": 5,
-      "lastVisit": "2022",
-      "recommended": [],
-      "links": [
-        {
-          "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/5bceBJCJHQRWpwXMA"
-        }
-      ],
-      "location": {
-        "coordinates": [-122.20247536909802, 47.610357925556706],
-        "bearing": "",
-        "icon": "restaurant"
-      }
-    },
-    {
-      "name": "Nana's Green Tea",
-      "description": " Different types of matcha available. Check for seasonal specialties!",
-      "rating": 5,
-      "lastVisit": "Q1 2025",
-      "recommended": [],
-      "links": [
-        {
-          "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/WVbZtYYzsaKyhVvP6"
-        }
-      ],
-      "location": {
-        "coordinates": [-122.20254815947432, 47.61062751055134],
-        "bearing": "",
-        "icon": "cafe"
-      }
-    },
-    {
       "name": "Third Culture Coffee",
       "description": "",
-      "rating": 5,
+      "rating": 2,
       "lastVisit": "Q1 2025",
       "recommended": [],
       "links": [
@@ -221,78 +312,6 @@
       ],
       "location": {
         "coordinates": [-122.2038936257962, 47.6108427064839],
-        "bearing": "",
-        "icon": "cafe"
-      }
-    },
-    {
-      "name": "Molly Moon's Ice Cream",
-      "description": "",
-      "rating": 5,
-      "lastVisit": "Q1 2025",
-      "recommended": [],
-      "links": [
-        {
-          "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/92VEyjHN2m5z8pkc7"
-        }
-      ],
-      "location": {
-        "coordinates": [-122.20380980676923, 47.61062300424918],
-        "bearing": "",
-        "icon": "confectionery"
-      }
-    },
-    {
-      "name": "Chawla's Cafe",
-      "description": "",
-      "rating": 5,
-      "lastVisit": "Q4 2024",
-      "recommended": [],
-      "links": [
-        {
-          "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/ANbW112Wzev615ND7"
-        }
-      ],
-      "location": {
-        "coordinates": [-122.2010450854983, 47.60984579869277],
-        "bearing": "",
-        "icon": "restaurant"
-      }
-    },
-    {
-      "name": "Belle Pastry French Bakery",
-      "description": "",
-      "rating": 5,
-      "lastVisit": "2022",
-      "recommended": [],
-      "links": [
-        {
-          "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/GsAcziaC3MXgeY7VA"
-        }
-      ],
-      "location": {
-        "coordinates": [-122.20227124905351, 47.609979677931655],
-        "bearing": "",
-        "icon": "cafe"
-      }
-    },
-    {
-      "name": "Bellden Cafe",
-      "description": "",
-      "rating": 5,
-      "lastVisit": "2021",
-      "recommended": [],
-      "links": [
-        {
-          "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/Z3zdpti9rWWnymX67"
-        }
-      ],
-      "location": {
-        "coordinates": [-122.1995085737966, 47.61001765168136],
         "bearing": "",
         "icon": "cafe"
       }
