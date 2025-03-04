@@ -49,7 +49,7 @@
     {
       "name": "Bellden Cafe",
       "description": "",
-      "rating": 1,
+      "rating": 0,
       "lastVisit": "2021",
       "recommended": [],
       "links": [
@@ -67,7 +67,7 @@
     {
       "name": "Belle Pastry French Bakery",
       "description": "",
-      "rating": 1,
+      "rating": 0,
       "lastVisit": "2022",
       "recommended": [],
       "links": [
@@ -80,6 +80,24 @@
         "coordinates": [-122.20227124905351, 47.609979677931655],
         "bearing": "",
         "icon": "cafe"
+      }
+    },
+    {
+      "name": "Broiler Bay Hamburgers",
+      "description": "Sometimes you just need a burger. Not a Shake Shack burger, not a fancy Wagyu burger, but a ccapital B Burger. That's why Broiler Bay exists.",
+      "rating": 4,
+      "lastVisit": "Q1 2025",
+      "recommended": ["Half fries + Half onion rings"],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/jiBobnxQjhxiztEF8"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19770635819306, 47.610481659875056],
+        "bearing": "",
+        "icon": "restaurant"
       }
     },
     {
@@ -103,7 +121,7 @@
     {
       "name": "Chawla's Cafe",
       "description": "",
-      "rating": 1,
+      "rating": 0,
       "lastVisit": "Q4 2024",
       "recommended": [],
       "links": [
@@ -114,6 +132,60 @@
       ],
       "location": {
         "coordinates": [-122.2010450854983, 47.60984579869277],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Chay Concept Vegetarian & Bar",
+      "description": "I almost asked if the food I was eating was really vegetarian. This place (thankfully?) doesn't try for vegetarian pho. Dishes are crafted with care and offer new experiences on Vietnamese food I wouldn't get elsewhere.",
+      "rating": 3,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/RAqaFb9LjPhAjsML8"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19818952220369, 47.612192352906106],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "CHICHA San Chen",
+      "description": "Having won the equivalent of a Michelin star, this Taiwanese boba shop has great tea flavors.",
+      "rating": 3,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/wbVZ2hZLN1utsHu97"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.1996649972852, 47.61299243726532],
+        "bearing": "",
+        "icon": "cafe"
+      }
+    },
+    {
+      "name": "Desi Tadka",
+      "description": "",
+      "rating": 2,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/WBnXjZhFpmZeHFRP6"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19961715175722, 47.61286449488458],
         "bearing": "",
         "icon": "restaurant"
       }
@@ -191,6 +263,24 @@
       }
     },
     {
+      "name": "Hui Lau Shan",
+      "description": "Known for its mango desserts, Hui Lau Shan and Yezi are like Yin (Mango) and Yang (Coconut). Both offer some mango and coconut in each others menus, but each place has its speciality.",
+      "rating": 2,
+      "lastVisit": "Q1 2025",
+      "recommended": ["Mango & coconut with Aloe Jelly"],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/crKGMrLWtdZAu5Rq6"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19858498556427, 47.61274879753967],
+        "bearing": "",
+        "icon": "confectionery"
+      }
+    },
+    {
       "name": "Molly Moon's Ice Cream",
       "description": "",
       "rating": 2,
@@ -205,7 +295,25 @@
       "location": {
         "coordinates": [-122.20380980676923, 47.61062300424918],
         "bearing": "",
-        "icon": "confectionery"
+        "icon": "cafe"
+      }
+    },
+    {
+      "name": "L'Experience Paris - Bellevue",
+      "description": "For years, L'Experience Paris has had the best croissants I've had in the states. The decadent layers of buttery crisp pastry holding statement flavors bringing me back to munching on a fresh croissant walking along the Seine makes me consider another trip to Paris. The quiches are light, the salads always a hit. And the wines? Please. You do know this place is unapologetically French, right?",
+      "rating": 5,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/HHb2DpByXr68Eoin6"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20380980676923, 47.61062300424918],
+        "bearing": "",
+        "icon": "cafe"
       }
     },
     {
@@ -228,7 +336,7 @@
     },
     {
       "name": "Nana's Green Tea",
-      "description": " Different types of matcha available. Check for seasonal specialties!",
+      "description": "Different types of matcha available. Check for seasonal specialties!",
       "rating": 3,
       "lastVisit": "Q1 2025",
       "recommended": [],
@@ -265,7 +373,7 @@
     {
       "name": "Pagliacci Pizza",
       "description": "The Seattle \"chain\" pizza shop. It's better than your usual takeout pizza, but nothing to write home about",
-      "rating": 3,
+      "rating": 2,
       "lastVisit": "Q4 2024",
       "recommended": [],
       "links": [
@@ -299,6 +407,24 @@
       }
     },
     {
+      "name": "Tendon Kohaku",
+      "description": "",
+      "rating": 3,
+      "lastVisit": "Q4 2024",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/VvPEnuSGsLazFqQi7"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19916458177548, 47.61299708386373],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
       "name": "Third Culture Coffee",
       "description": "",
       "rating": 2,
@@ -314,6 +440,96 @@
         "coordinates": [-122.2038936257962, 47.6108427064839],
         "bearing": "",
         "icon": "cafe"
+      }
+    },
+    {
+      "name": "Thai Grill Restaurant",
+      "description": "As a friend once described this place, it's \"aggressively mid\". Decent location for a Thai restaurant, and a place to go if you're looking for a no-frills takeout-style Thai eatery.",
+      "rating": 2,
+      "lastVisit": "Q1 2025",
+      "recommended": ["Rama Noodle"],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/6sgyEgmLvoFm37F37"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19848273308816, 47.612432144532306],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Toshi's Teriyaki",
+      "description": "Just like many other Seattle teriyaki spots, Toshi's exists. It's decent food for when you've got that teriyaki itch.",
+      "rating": 2,
+      "lastVisit": "Q1 2025",
+      "recommended": ["Chicken Yakisoba"],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/6sgyEgmLvoFm37F37"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.2038936257962, 47.6108427064839],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "TOUS les JOURS",
+      "description": "A bakery located within H Mart. Expectations weren't high going in, and I'm happy things are like that. Sometimes you just need a mid-tier bakery that handles the foundations.",
+      "rating": 2,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/RrqvohjNDf7itaK86"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19589806863536, 47.61114685142216],
+        "bearing": "",
+        "icon": "cafe"
+      }
+    },
+    {
+      "name": "Xiao Chi Jie",
+      "description": "Known for their soup dumplings. However, I'd very much rather get their Sheng Jian Bao.",
+      "rating": 1,
+      "lastVisit": "Q4 2024",
+      "recommended": ["Sheng Jian Bao"],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/kbF1s8fQARfYfZC79"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19860343248703, 47.612676249624855],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Yezi Coconut Dessert",
+      "description": "Coconut in a jar? Coconut jelly? Yezi's coconut jars are a delight!",
+      "rating": 3,
+      "lastVisit": "Q1 2025",
+      "recommended": ["Whole Coconut", "Black Sesame Coconut"],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/GSpF9YX4J2gM61TdA"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19800466812937, 47.611916237969496],
+        "bearing": "",
+        "icon": "confectionery"
       }
     }
   ]
