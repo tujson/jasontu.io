@@ -83,6 +83,24 @@
       }
     },
     {
+      "name": "Boiling Point",
+      "description": "Hotpot, but everything's already inside the pot.",
+      "rating": 4,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/ehdh2Wg5MqSgRMmV7"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20259370222047, 47.61987487969212],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
       "name": "Bowl Gogi",
       "description": "Chipotle, but Korean.",
       "rating": 2,
@@ -137,6 +155,42 @@
       }
     },
     {
+      "name": "Cactus Bellevue Square",
+      "description": "",
+      "rating": 2,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/JZP9BJGTrtzPSFsA6"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20179733104897, 47.61682997482568],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Castilla Restaurant and Tapas Bar",
+      "description": "",
+      "rating": 3,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/ySakdKYMWy5eHBGr8"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20200300809387, 47.61651747147783],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
       "name": "Chawla's Cafe",
       "description": "",
       "rating": 0,
@@ -173,6 +227,33 @@
       }
     },
     {
+      "name": "Cheesecake Factory, The",
+      "description": "An American institution, The Cheesecake Factory has more than cheesecake and overly boozy drinks. Big portions made fresh splatter across its middle school length book of a menu.",
+      "rating": 3,
+      "lastVisit": "Q1 2025",
+      "recommended": [
+        "Cheeseburger Spring Rolls",
+        "Street Corn",
+        "Chicken Parmesan \"Pizza Style\"",
+        "Bang Bang Chicken and Shrimp",
+        "Pasta Carbonara",
+        "Cajun Jambalaya Pasta",
+        "Jamaican Black Pepper Shrimp",
+        "Stuffed Mushrooms"
+      ],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/ZGV7QjtwVAKk1jN29"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20198978113969, 47.61600172362416],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
       "name": "CHICHA San Chen",
       "description": "Having won the equivalent of a Michelin star, this Taiwanese boba shop has great tea flavors.",
       "rating": 3,
@@ -204,6 +285,24 @@
       ],
       "location": {
         "coordinates": [-122.19955478045769, 47.61358626758808],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Earl's Kitchen + Bar",
+      "description": "",
+      "rating": 2,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/iE11JfauFiQXg6ig8"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.2010249301904, 47.616375619012715],
         "bearing": "",
         "icon": "restaurant"
       }
@@ -260,6 +359,24 @@
         "coordinates": [-122.19321248491676, 47.61589592712153],
         "bearing": "",
         "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Dote Coffee Bar",
+      "description": "My favorite downtown Belleuve cup of coffee, Dote also has artisinal truffles that make me waver every time I pick up some coffee beans.",
+      "rating": 4,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/KwTHTYFuNEyX2wLH6"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20085712953306, 47.61457635510078],
+        "bearing": "",
+        "icon": "cafe"
       }
     },
     {
@@ -330,6 +447,24 @@
       ],
       "location": {
         "coordinates": [-122.1968641847953, 47.613629789702934],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Fogo de Chão Brazilian Steakhouse",
+      "description": "",
+      "rating": 4,
+      "lastVisit": "Q4 2024",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/3SVFmC2dGA1FkSj19"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20116298494695, 47.614566870644325],
         "bearing": "",
         "icon": "restaurant"
       }
@@ -425,6 +560,42 @@
       }
     },
     {
+      "name": "JOEY Bellevue",
+      "description": "",
+      "rating": 2,
+      "lastVisit": "Q3 2023",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/mvPQc4sSUVFdojXT9"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20109198235372, 47.61775570873323],
+        "bearing": "",
+        "icon": "confectionery"
+      }
+    },
+    {
+      "name": "Kizuki Ramen & Izakaya",
+      "description": "A delicious bowl of ramen that always disappears faster than I'd like.",
+      "rating": 3,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/U4gL1fY4tZ2sN8jw5"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20327420061356, 47.614656332873295],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
       "name": "Market Fresh Key Center",
       "description": "A pay-by-weight lunch spot, Market Fresh has, for better or worse, the same selections every day. Quality is good, selections are abundant.",
       "rating": 3,
@@ -440,6 +611,42 @@
         "coordinates": [-122.196601531137, 47.616048170798244],
         "bearing": "",
         "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Me + Crêpe",
+      "description": "If you've never had a \"Chinese Crepe\", this is a great place to try one.",
+      "rating": 3,
+      "lastVisit": "Q1 2025",
+      "recommended": ["Duck Crepe"],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/UbrfogHx9TWFu6sF6"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.2045027878739, 47.616030684270406],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Milk Bar",
+      "description": "The famous Milk Bar's slightly out-of-place stand in Bellevue offers sweet desserts that make you feel guilty for eating but secretly wanting for more.",
+      "rating": 3,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/SaVx8Nu8zEtbYQG38"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20449295095693, 47.617025242567685],
+        "bearing": "",
+        "icon": "confectionery"
       }
     },
     {
@@ -587,6 +794,42 @@
       }
     },
     {
+      "name": "Seoul Bowl Bellevue",
+      "description": "Fresh ingredients and great fried chicken.",
+      "rating": 3,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/pQRCPnG52moj5Mqb9"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.2007815455322, 47.614406195666135],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Shake Shack Bellevue Square",
+      "description": "",
+      "rating": 2,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/bZkhmkuFARXEUymu8"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20190193719465, 47.61637796336588],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
       "name": "Tapster Bellevue",
       "description": "Try as many beers as you'd like, Tapster's smaller location affords a cozy atmosphere.",
       "rating": 3,
@@ -602,6 +845,24 @@
         "coordinates": [-122.19881180858192, 47.61190285263364],
         "bearing": "",
         "icon": "bar"
+      }
+    },
+    {
+      "name": "Tavern Hall",
+      "description": "",
+      "rating": 2,
+      "lastVisit": "Q1 2025",
+      "recommended": ["Moscow Mule"],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/vYHJq5KihnjEZ9he8"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20189657277693, 47.61647379012176],
+        "bearing": "",
+        "icon": "restaurant"
       }
     },
     {
