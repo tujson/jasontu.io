@@ -83,6 +83,24 @@
       }
     },
     {
+      "name": "Bowl Gogi",
+      "description": "Chipotle, but Korean.",
+      "rating": 2,
+      "lastVisit": "2024",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/GKcneNvb7PCCgjKP9"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19536699264091, 47.61533551323458],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
       "name": "Broiler Bay Hamburgers",
       "description": "Sometimes you just need a burger. Not a Shake Shack burger, not a fancy Wagyu burger, but a ccapital B Burger. That's why Broiler Bay exists.",
       "rating": 4,
@@ -173,6 +191,42 @@
       }
     },
     {
+      "name": "Chipotle Mexican Grill",
+      "description": "",
+      "rating": 2,
+      "lastVisit": "Q3 2024",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/Sy7X6sngzissja4r7"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19955478045769, 47.61358626758808],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Deli Queen",
+      "description": "Sandwiches and soups with a hint of a Korean influence. This place runs out early and is a favorite amongst workers nearby.",
+      "rating": 2,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/LZJundcNp3GQtMeGA"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19650680182464, 47.616181205228756],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
       "name": "Desi Tadka",
       "description": "",
       "rating": 2,
@@ -186,6 +240,24 @@
       ],
       "location": {
         "coordinates": [-122.19961715175722, 47.61286449488458],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Dolar Shop, The",
+      "description": "A fancy hotpot place, The Dolar Shop offers individual pots with fancy broths and good quality meats.",
+      "rating": 2,
+      "lastVisit": "Q3 2024",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/W7VWhwepQwkPLWtY6"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19321248491676, 47.61589592712153],
         "bearing": "",
         "icon": "restaurant"
       }
@@ -209,6 +281,24 @@
       }
     },
     {
+      "name": "Evergreens",
+      "description": "",
+      "rating": 2,
+      "lastVisit": "Q3 2024",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/NU1tntoWPymaXVgB6"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19967543965426, 47.613631704092164],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
       "name": "Fern Thai on Main",
       "description": "There's at least one chef here who understands 鍋氣 (guōqì), when food kisses the fire that leaps over a wok's edge. The Crab Fried Rice and Roast Duck Curry stand above the other dishes in both flavor and composition. Their Pad Thai is interesting, but more memorable for its banana leaf.",
       "rating": 4,
@@ -222,6 +312,24 @@
       ],
       "location": {
         "coordinates": [-122.20460348377, 47.610372186057084],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "FOB Poke & Sushi Bar",
+      "description": "Fresh fish and lots of it? I'm not talking about the ocean, I'm talking about FOB. Ordering a poke bowl sometimes gives me more stress than it should, but the result is worth it. So worth it.",
+      "rating": 3,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/FpPbUYc1g1Hr8LvT6"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.1968641847953, 47.613629789702934],
         "bearing": "",
         "icon": "restaurant"
       }
@@ -263,6 +371,42 @@
       }
     },
     {
+      "name": "HEYTEA",
+      "description": "",
+      "rating": 4,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/X3w7xuXvULmqVeQo7"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.1930206897095, 47.61596828694942],
+        "bearing": "",
+        "icon": "cafe"
+      }
+    },
+    {
+      "name": "Hokkaido Ramen Santouka Bellevue",
+      "description": "A serviceable bowl of ramen.",
+      "rating": 2,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/iiYbCMEkj1oSCv5t5"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.20189634880381, 47.6113513461576],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
       "name": "Hui Lau Shan",
       "description": "Known for its mango desserts, Hui Lau Shan and Yezi are like Yin (Mango) and Yang (Coconut). Both offer some mango and coconut in each others menus, but each place has its speciality.",
       "rating": 2,
@@ -278,6 +422,24 @@
         "coordinates": [-122.19858498556427, 47.61274879753967],
         "bearing": "",
         "icon": "confectionery"
+      }
+    },
+    {
+      "name": "Market Fresh Key Center",
+      "description": "A pay-by-weight lunch spot, Market Fresh has, for better or worse, the same selections every day. Quality is good, selections are abundant.",
+      "rating": 3,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/ds9HhUaFaBcujFT56"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.196601531137, 47.616048170798244],
+        "bearing": "",
+        "icon": "restaurant"
       }
     },
     {
@@ -404,6 +566,42 @@
         "coordinates": [-122.20284919301244, 47.61007070715764],
         "bearing": "",
         "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Pho Cyclo Cafe",
+      "description": "A weekday Pho shop that itches the spot.",
+      "rating": 3,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/EnrwSL3RhJMLamEd9"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19598047771153, 47.61470757759535],
+        "bearing": "",
+        "icon": "restaurant"
+      }
+    },
+    {
+      "name": "Tapster Bellevue",
+      "description": "Try as many beers as you'd like, Tapster's smaller location affords a cozy atmosphere.",
+      "rating": 3,
+      "lastVisit": "Q1 2025",
+      "recommended": [],
+      "links": [
+        {
+          "name": "Google Maps",
+          "value": "https://maps.app.goo.gl/bRQFq1JYXpr4jtFG8"
+        }
+      ],
+      "location": {
+        "coordinates": [-122.19881180858192, 47.61190285263364],
+        "bearing": "",
+        "icon": "bar"
       }
     },
     {
