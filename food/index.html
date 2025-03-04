@@ -103,12 +103,12 @@
 
     <div class="container-fluid no-padding" style="padding: 0">
       <div class="row" style="width: 100%; height: 94%">
-        <div class="col-md-8 order-md-2" style="min-height: 30%">
+        <div class="col-md-9 order-md-2" style="min-height: 30%">
           <div id="map"></div>
         </div>
         <div
           id="places"
-          class="col-md-4 order-md-1"
+          class="col-md-3 order-md-1"
           align="start"
           style="
             overflow-y: scroll;
@@ -170,6 +170,11 @@
         .then((allData) => {
           const data = allData["bellevue"];
           data
+            .sort((a, b) =>
+              a["rating"] === b["rating"]
+                ? a["name"].localeCompare(b["name"])
+                : b["rating"] - a["rating"]
+            )
             .filter((item) => item["name"] !== "root")
             .forEach((item) => {
               const sectionElement = document.createElement("section");
@@ -185,9 +190,16 @@
               personalElement.className = "border";
               personalElement.style.padding = "10px";
 
+              if (item.rating > 3) {
+                const ratingElement = document.createElement("p");
+                ratingElement.textContent = "Rating: " + item.rating + "/5";
+                ratingElement.style.marginBottom = "5px";
+                personalElement.append(ratingElement);
+              }
+
               const lastVisitElement = document.createElement("p");
               lastVisitElement.style.marginBottom = "5px";
-              lastVisitElement.textContent = "Last visit: Q1 2025";
+              lastVisitElement.textContent = "Last visit: " + item.lastVisit;
               personalElement.appendChild(lastVisitElement);
 
               if (
