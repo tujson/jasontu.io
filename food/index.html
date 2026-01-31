@@ -21,15 +21,6 @@
     ></script>
     <script src="https://use.fontawesome.com/deb6d0cd20.js"></script>
 
-    <meta
-      name="viewport"
-      content="initial-scale=1,maximum-scale=1,user-scalable=no"
-    />
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css"
-      rel="stylesheet"
-    />
-    <script src="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js"></script>
     <style>
       #map {
         position: absolute;
@@ -141,237 +132,114 @@
     </div>
 
     <script>
-      function convertToGeoJSON(jsonData) {
-        const geojson = {
-          type: "FeatureCollection",
-          features: jsonData.map((item) => ({
-            type: "Feature",
-            geometry: {
-              type: "Point",
-              coordinates: item.location.coordinates,
-            },
-            properties: {
-              name: item.name,
-              description: item.description,
-              rating: item.rating,
-              lastVisit: item.lastVisit,
-              recommended: item.recommended,
-              links: item.links,
-              bearing: item.location.bearing,
-              icon: item.location.icon,
-            },
-          })),
-        };
-        return geojson;
-      }
+      // Initialize Google Maps
+      let map;
+      let markers = [];
+      let infoWindow;
+      
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 47.612, lng: -122.202 },
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+        });
+        
+        infoWindow = new google.maps.InfoWindow();
+        
+        // Load data and create markers
+        fetch("./data.json")
+          .then((response) => response.json())
+          .then((allData) => {
+            const data = allData["bellevue"];
+            data
+              .sort((a, b) =>
+                a["rating"] === b["rating"]
+                  ? a["name"].localeCompare(b["name"])
+                  : b["rating"] - a["rating"]
+              )
+              .filter((item) => item["name"] !== "root")
+              .forEach((item) => {
+                // Create section for each place
+                const sectionElement = document.createElement("section");
+                sectionElement.id = item.name;
 
-      fetch("data.json")
-        .then((response) => response.json())
-        .then((allData) => {
-          const data = allData["bellevue"];
-          data
-            .sort((a, b) =>
-              a["rating"] === b["rating"]
-                ? a["name"].localeCompare(b["name"])
-                : b["rating"] - a["rating"]
-            )
-            .filter((item) => item["name"] !== "root")
-            .forEach((item) => {
-              const sectionElement = document.createElement("section");
-              sectionElement.id = item.name;
+                const nameElement = document.createElement("h3");
+                nameElement.textContent = item.name;
 
-              const nameElement = document.createElement("h3");
-              nameElement.textContent = item.name;
+                const descriptionElement = document.createElement("p");
+                descriptionElement.textContent = item.description;
 
-              const descriptionElement = document.createElement("p");
-              descriptionElement.textContent = item.description;
+                const personalElement = document.createElement("div");
+                personalElement.className = "border";
+                personalElement.style.padding = "10px";
 
-              const personalElement = document.createElement("div");
-              personalElement.className = "border";
-              personalElement.style.padding = "10px";
-
-              if (item.rating > 3) {
-                const ratingElement = document.createElement("p");
-                ratingElement.textContent = "Rating: " + item.rating + "/5";
-                ratingElement.style.marginBottom = "5px";
-                personalElement.append(ratingElement);
-              }
-
-              const lastVisitElement = document.createElement("p");
-              lastVisitElement.style.marginBottom = "5px";
-              lastVisitElement.textContent = "Last visit: " + item.lastVisit;
-              personalElement.appendChild(lastVisitElement);
-
-              if (
-                item.recommended !== undefined &&
-                item.recommended.length > 0
-              ) {
-                const recommendedElement = document.createElement("p");
-                recommendedElement.style.marginBottom = "3px";
-                recommendedElement.textContent = "Recommended Dishes";
-                personalElement.appendChild(recommendedElement);
-
-                const recommendations = document.createElement("ul");
-                recommendations.className = "list-group";
-                personalElement.appendChild(recommendations);
-
-                item.recommended.forEach((recommendedItem) => {
-                  const li = document.createElement("li");
-                  li.className = "list-group-item";
-                  li.textContent = recommendedItem;
-                  recommendations.appendChild(li);
-                });
-              }
-
-              const linksElement = document.createElement("div");
-              item.links.forEach((link) => {
-                const linkElement = document.createElement("a");
-                linkElement.href = link.value;
-                linkElement.textContent = link.name;
-                linkElement.target = "_blank";
-                linkElement.rel = "noopener noreferrer";
-                linksElement.append(linkElement);
-              });
-
-              sectionElement.appendChild(nameElement);
-              sectionElement.appendChild(descriptionElement);
-              sectionElement.appendChild(personalElement);
-              sectionElement.appendChild(linksElement);
-
-              document.getElementById("places").appendChild(sectionElement);
-
-              const unobfuscateString = (str) =>
-                str.replace(/[a-zA-Z]/g, (char) => {
-                  const base = char <= "Z" ? 65 : 97;
-                  return String.fromCharCode(
-                    ((char.charCodeAt(0) - base - 1 + 26) % 26) + base
-                  );
-                });
-              mapboxgl.accessToken = unobfuscateString(
-                "ql.fzK1JkpjeHm0cHWseXKwJjxjZTJ6JnOuO3OzPUSabUC1NYFzb29qfkCycUOpdHNjgR.QFSiYyMyby70A4VoYJCCyB"
-              );
-
-              function loadMultipleImages(map, imagePaths, callback) {
-                const imagePromises = [];
-                const imageNames = []; // Array to store extracted image names
-
-                for (let i = 0; i < imagePaths.length; i++) {
-                  const imagePath = imagePaths[i];
-                  const imagePathSplit = imagePath.split("/");
-                  const imageFilename =
-                    imagePathSplit[imagePathSplit.length - 1];
-                  const imageName = imageFilename.split(".")[0]; // Extract name
-                  imageNames.push(imageName);
-
-                  const promise = new Promise((resolve, reject) => {
-                    map.loadImage(imagePath, (error, image) => {
-                      if (error) {
-                        reject(error);
-                        return;
-                      }
-                      map.addImage(imageName, image);
-                      resolve();
-                    });
-                  });
-                  imagePromises.push(promise);
+                if (item.rating > 3) {
+                  const ratingElement = document.createElement("p");
+                  ratingElement.textContent = "Rating: " + item.rating + "/5";
+                  ratingElement.style.marginBottom = "5px";
+                  personalElement.append(ratingElement);
                 }
 
-                Promise.all(imagePromises)
-                  .then(() => {
-                    callback(imageNames);
-                  })
-                  .catch((error) => {
-                    console.error("Error loading images:", error);
+                const lastVisitElement = document.createElement("p");
+                lastVisitElement.style.marginBottom = "5px";
+                lastVisitElement.textContent = "Last visit: " + item.lastVisit;
+                personalElement.appendChild(lastVisitElement);
+
+                if (
+                  item.recommended !== undefined &&
+                  item.recommended.length > 0
+                ) {
+                  const recommendedElement = document.createElement("p");
+                  recommendedElement.style.marginBottom = "3px";
+                  recommendedElement.textContent = "Recommended Dishes";
+                  personalElement.appendChild(recommendedElement);
+
+                  const recommendations = document.createElement("ul");
+                  recommendations.className = "list-group";
+                  personalElement.appendChild(recommendations);
+
+                  item.recommended.forEach((recommendedItem) => {
+                    const li = document.createElement("li");
+                    li.className = "list-group-item";
+                    li.textContent = recommendedItem;
+                    recommendations.appendChild(li);
                   });
-              }
+                }
 
-              const map = new mapboxgl.Map({
-                container: "map",
-                center: [-122.202, 47.612],
-                zoom: 16,
-              });
-              map.on("load", () => {
-                loadMultipleImages(
-                  map,
-                  [
-                    "bar.png",
-                    "cafe.png",
-                    "confectionery.png",
-                    "restaurant.png",
-                  ],
-                  () => {
-                    map.addSource("places", {
-                      type: "geojson",
-                      data: convertToGeoJSON(data),
-                    });
-                    map.addLayer({
-                      id: "places",
-                      type: "symbol",
-                      source: "places",
-                      layout: {
-                        "icon-image": [
-                          "coalesce",
-                          ["get", "icon"],
-                          "restaurant",
-                        ],
-                        "icon-size": 1.5,
-                        "icon-allow-overlap": true,
-                      },
-                    });
-                    map.on("click", "places", (e) => {
-                      const coordinates =
-                        e.features[0].geometry.coordinates.slice();
-                      const description = e.features[0].properties.name;
+                const linksElement = document.createElement("div");
+                item.links.forEach((link) => {
+                  const linkElement = document.createElement("a");
+                  linkElement.href = link.value;
+                  linkElement.textContent = link.name;
+                  linkElement.target = "_blank";
+                  linkElement.rel = "noopener noreferrer";
+                  linksElement.append(linkElement);
+                });
 
-                      if (
-                        ["mercator", "equirectangular"].includes(
-                          map.getProjection().name
-                        )
-                      ) {
-                        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                          coordinates[0] +=
-                            e.lngLat.lng > coordinates[0] ? 360 : -360;
-                        }
-                      }
+                sectionElement.appendChild(nameElement);
+                sectionElement.appendChild(descriptionElement);
+                sectionElement.appendChild(personalElement);
+                sectionElement.appendChild(linksElement);
 
-                      document
-                        .getElementById(e.features[0].properties.name)
-                        .scrollIntoView();
+                document.getElementById("places").appendChild(sectionElement);
 
-                      new mapboxgl.Popup()
-                        .setLngLat(coordinates)
-                        .setHTML(description)
-                        .addTo(map);
-                    });
-                    map.on("mouseenter", "places", () => {
-                      map.getCanvas().style.cursor = "pointer";
-                    });
-                    map.on("mouseleave", "places", () => {
-                      map.getCanvas().style.cursor = "";
-                    });
-                  }
-                );
+                // Create marker for each place
+                const marker = createMarker(item);
+                markers.push({
+                  place: item,
+                  marker: marker
+                });
               });
 
               let activePlaceName = "";
               function setActivePlace(place) {
                 if (place["name"] === activePlaceName) return;
 
-                map.flyTo({
-                  bearing:
-                    place["location"]["bearing"] === undefined
-                      ? 0
-                      : place["location"]["bearing"],
-                  center: place["location"]["coordinates"],
-                  zoom:
-                    place["location"]["zoom"] === undefined
-                      ? 18
-                      : place["location"]["zoom"],
-                  pitch:
-                    place["location"]["pitch"] === undefined
-                      ? 60
-                      : place["location"]["pitch"],
+                map.panTo({ 
+                  lat: place["location"]["coordinates"][1], 
+                  lng: place["location"]["coordinates"][0] 
                 });
+                map.setZoom(place["location"]["zoom"] === undefined ? 18 : place["location"]["zoom"]);
 
                 document.getElementById(place["name"]).classList.add("active");
                 if (activePlaceName !== "") {
@@ -397,8 +265,46 @@
                   }
                 }
               };
-            });
         });
+      }
+
+      function createMarker(item) {
+        const position = {
+          lat: item.location.coordinates[1],
+          lng: item.location.coordinates[0]
+        };
+
+        // Create custom marker icon
+        const icon = {
+          url: item.location.icon ? item.location.icon + ".png" : "restaurant.png",
+          scaledSize: new google.maps.Size(20, 20),
+          origin: new google.maps.Point(0, 0),
+          anchor: new google.maps.Point(10, 25)
+        };
+
+        const marker = new google.maps.Marker({
+          position: position,
+          map: map,
+          title: item.name,
+          icon: icon,
+          optimized: false
+        });
+
+        // Add click event to marker
+        marker.addListener("click", () => {
+          // Open info window
+          infoWindow.setContent(`<div><strong>${item.name}</strong></div>`);
+          infoWindow.open(map, marker);
+          
+          // Scroll to section
+          document.getElementById(item.name).scrollIntoView();
+        });
+
+        return marker;
+      }
     </script>
+
+    <!-- Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAljk1mYw7_y0La5f2OGCnAEINY0v_YWV4&callback=initMap"></script>
   </body>
 </html>
