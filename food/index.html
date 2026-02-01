@@ -52,7 +52,7 @@
       gtag("config", "G-BGNY90CHM3");
     </script>
   </head>
-  <body style="font-family: 'Lato'">
+  <body style="font-family: Lato">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <button
         class="navbar-toggler"
@@ -136,16 +136,42 @@
       let map;
       let markers = [];
       let infoWindow;
-      
+
       function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
           center: { lat: 47.612, lng: -122.202 },
           zoom: 16,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
+          styles: [
+            {
+              elementType: "labels",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "administrative.land_parcel",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "administrative.neighborhood",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+          ],
         });
-        
+
         infoWindow = new google.maps.InfoWindow();
-        
+
         // Load data and create markers
         fetch("./data.json")
           .then((response) => response.json())
@@ -155,7 +181,7 @@
               .sort((a, b) =>
                 a["rating"] === b["rating"]
                   ? a["name"].localeCompare(b["name"])
-                  : b["rating"] - a["rating"]
+                  : b["rating"] - a["rating"],
               )
               .filter((item) => item["name"] !== "root")
               .forEach((item) => {
@@ -224,45 +250,53 @@
                 document.getElementById("places").appendChild(sectionElement);
               });
 
-              let activePlaceName = "";
-              function setActivePlace(place) {
-                if (place["name"] === activePlaceName) return;
+            let activePlaceName = "";
+            function setActivePlace(place) {
+              if (place["name"] === activePlaceName) return;
 
-                map.panTo({ 
-                  lat: place["location"]["coordinates"][1], 
-                  lng: place["location"]["coordinates"][0] 
-                });
-                map.setZoom(place["location"]["zoom"] === undefined ? 18 : place["location"]["zoom"]);
+              map.panTo({
+                lat: place["location"]["coordinates"][1],
+                lng: place["location"]["coordinates"][0],
+              });
+              map.setZoom(
+                place["location"]["zoom"] === undefined
+                  ? 18
+                  : place["location"]["zoom"],
+              );
 
-                document.getElementById(place["name"]).classList.add("active");
-                if (activePlaceName !== "") {
-                  document
-                    .getElementById(activePlaceName)
-                    .classList.remove("active");
-                }
-
-                activePlaceName = place["name"];
+              document.getElementById(place["name"]).classList.add("active");
+              if (activePlaceName !== "") {
+                document
+                  .getElementById(activePlaceName)
+                  .classList.remove("active");
               }
 
-              function isElementOnScreen(id) {
-                const element = document.getElementById(id);
-                const bounds = element.getBoundingClientRect();
-                return bounds.top < window.innerHeight && bounds.bottom > 300;
-              }
+              activePlaceName = place["name"];
+            }
 
-              document.getElementById("places").onscroll = () => {
-                for (const place of data) {
-                  if (isElementOnScreen(place["name"])) {
-                    setActivePlace(place);
-                    break;
-                  }
+            function isElementOnScreen(id) {
+              const element = document.getElementById(id);
+              const bounds = element.getBoundingClientRect();
+              return bounds.top < window.innerHeight && bounds.bottom > 300;
+            }
+
+            document.getElementById("places").onscroll = () => {
+              for (const place of data) {
+                if (isElementOnScreen(place["name"])) {
+                  setActivePlace(place);
+                  break;
                 }
-              };
-        });
+              }
+            };
+          });
       }
     </script>
 
-    <!-- Google Maps API with Places library -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZS3Grl1lIsBk7Y_N7HVaZOdPdG63JgG8&callback=initMap&libraries=places"></script>
+    <!-- Google Maps API without Places library -->
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZS3Grl1lIsBk7Y_N7HVaZOdPdG63JgG8&callback=initMap"
+    ></script>
   </body>
 </html>
