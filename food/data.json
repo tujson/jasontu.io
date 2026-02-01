@@ -24,7 +24,8 @@
       "location": {
         "coordinates": [-122.20416111064422, 47.610341842686736],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJhY1xAn5skFQR740cPn2c5Kc"
       }
     },
 
@@ -43,7 +44,8 @@
       "location": {
         "coordinates": [-122.20241540071439, 47.61041979910802],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJX1ir8n1skFQRW3dgnlJ3fp0"
       }
     },
     {
@@ -61,7 +63,8 @@
       "location": {
         "coordinates": [-122.1995085737966, 47.61001765168136],
         "bearing": "",
-        "icon": "cafe"
+        "icon": "cafe",
+        "googleMapsPlaceId": "ChIJ56sNpH1skFQRa4jznGtK-WY"
       }
     },
     {
@@ -79,7 +82,8 @@
       "location": {
         "coordinates": [-122.20227124905351, 47.609979677931655],
         "bearing": "",
-        "icon": "cafe"
+        "icon": "cafe",
+        "googleMapsPlaceId": "ChIJdRWD_n1skFQR9y7dJuLScms"
       }
     },
     {
@@ -97,7 +101,8 @@
       "location": {
         "coordinates": [-122.20259370222047, 47.61987487969212],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJcYllSY5skFQR6nwQnUGLsQA"
       }
     },
     {
@@ -115,7 +120,8 @@
       "location": {
         "coordinates": [-122.19536699264091, 47.61533551323458],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJ58gxuFdtkFQRfFdHDtpxWR8"
       }
     },
     {
@@ -133,7 +139,8 @@
       "location": {
         "coordinates": [-122.19770635819306, 47.610481659875056],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJW2QhBn1skFQRB-lZVQkoVL4"
       }
     },
     {
@@ -151,7 +158,8 @@
       "location": {
         "coordinates": [-122.20314676835696, 47.610061281584],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJySRymp1tkFQRveswcsmgCwA"
       }
     },
     {
@@ -169,7 +177,8 @@
       "location": {
         "coordinates": [-122.20179733104897, 47.61682997482568],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJ8eP5VY9skFQRj_eSuT7hnhM"
       }
     },
     {
@@ -187,25 +196,8 @@
       "location": {
         "coordinates": [-122.20200300809387, 47.61651747147783],
         "bearing": "",
-        "icon": "restaurant"
-      }
-    },
-    {
-      "name": "Chawla's Cafe",
-      "description": "",
-      "rating": 0,
-      "lastVisit": "Q4 2024",
-      "recommended": [],
-      "links": [
-        {
-          "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/ANbW112Wzev615ND7"
-        }
-      ],
-      "location": {
-        "coordinates": [-122.2010450854983, 47.60984579869277],
-        "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJqyWGR8ttkFQRmbV4DG1N088"
       }
     },
     {
@@ -223,7 +215,8 @@
       "location": {
         "coordinates": [-122.19818952220369, 47.612192352906106],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJr2BYiL9tkFQRdUk1EUJ3iV4"
       }
     },
     {
@@ -250,7 +243,8 @@
       "location": {
         "coordinates": [-122.20198978113969, 47.61600172362416],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJdSUTa4ZskFQRxsn2-IoZwto"
       }
     },
     {
@@ -266,9 +260,10 @@
         }
       ],
       "location": {
-        "coordinates": [-122.1996649972852, 47.61299243726532],
+        "coordinates": [-122.20286729318629, 47.615644649439666],
         "bearing": "",
-        "icon": "cafe"
+        "icon": "cafe",
+        "googleMapsPlaceId": "ChIJG7hjCUZtkFQR18zhUHvgKpw"
       }
     },
     {
@@ -286,7 +281,8 @@
       "location": {
         "coordinates": [-122.19955478045769, 47.61358626758808],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJW4VXzodskFQRseSBkOHh9Vg"
       }
     },
     {
@@ -304,11 +300,12 @@
       "location": {
         "coordinates": [-122.2010249301904, 47.616375619012715],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJkTtnrYhskFQRuAW_QTilgLQ"
       }
     },
     {
-      "name": "Deli Queen",
+      "name": "Deli Queen Roll & Bowl",
       "description": "Sandwiches and soups with a hint of a Korean influence. This place runs out early and is a favorite amongst workers nearby.",
       "rating": 2,
       "lastVisit": "Q1 2025",
@@ -322,7 +319,8 @@
       "location": {
         "coordinates": [-122.19650680182464, 47.616181205228756],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJG0gY_ohskFQRwqDiiN5oo7k"
       }
     },
     {
@@ -340,7 +338,8 @@
       "location": {
         "coordinates": [-122.19961715175722, 47.61286449488458],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJ3y0GZ71tkFQRmK2dgqcWIOI"
       }
     },
     {
@@ -358,7 +357,8 @@
       "location": {
         "coordinates": [-122.19321248491676, 47.61589592712153],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJj8eFgs9tkFQRfy1RpqzHFEY"
       }
     },
     {
@@ -376,7 +376,8 @@
       "location": {
         "coordinates": [-122.20085712953306, 47.61457635510078],
         "bearing": "",
-        "icon": "cafe"
+        "icon": "cafe",
+        "googleMapsPlaceId": "ChIJyVQ6MYZskFQRkE91ZUQyDIo"
       }
     },
     {
@@ -394,7 +395,8 @@
       "location": {
         "coordinates": [-122.20247536909802, 47.610357925556706],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJl0CSabBtkFQRrqopqhRluJw"
       }
     },
     {
@@ -412,7 +414,8 @@
       "location": {
         "coordinates": [-122.19967543965426, 47.613631704092164],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJk0rsSpptkFQRNPjwEGOYoww"
       }
     },
     {
@@ -430,7 +433,8 @@
       "location": {
         "coordinates": [-122.20460348377, 47.610372186057084],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJQX7ANqFtkFQRmfzOyNMLa4U"
       }
     },
     {
@@ -448,7 +452,8 @@
       "location": {
         "coordinates": [-122.1968641847953, 47.613629789702934],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJpz1JKOltkFQRyKrUs09ynxc"
       }
     },
     {
@@ -466,7 +471,8 @@
       "location": {
         "coordinates": [-122.20116298494695, 47.614566870644325],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJSd2HOYZskFQRkOESY01_MM0"
       }
     },
     {
@@ -484,7 +490,8 @@
       "location": {
         "coordinates": [-122.20535254597318, 47.61030359852095],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJA3QEpIBskFQRjxiEDzGIz5k"
       }
     },
     {
@@ -502,7 +509,8 @@
       "location": {
         "coordinates": [-122.20417183947966, 47.609880733750956],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJGfJAEX5skFQRjyifKoevxF0"
       }
     },
     {
@@ -520,7 +528,8 @@
       "location": {
         "coordinates": [-122.1930206897095, 47.61596828694942],
         "bearing": "",
-        "icon": "cafe"
+        "icon": "cafe",
+        "googleMapsPlaceId": "ChIJQZA8KGBtkFQRf7ePdSZvBJE"
       }
     },
     {
@@ -538,7 +547,8 @@
       "location": {
         "coordinates": [-122.20189634880381, 47.6113513461576],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJTaRy231skFQRF8u2jBrpyl4"
       }
     },
     {
@@ -556,7 +566,8 @@
       "location": {
         "coordinates": [-122.19858498556427, 47.61274879753967],
         "bearing": "",
-        "icon": "confectionery"
+        "icon": "confectionery",
+        "googleMapsPlaceId": "ChIJSQPA7yttkFQRqqHiZCm7v7U"
       }
     },
     {
@@ -574,7 +585,8 @@
       "location": {
         "coordinates": [-122.20109198235372, 47.61775570873323],
         "bearing": "",
-        "icon": "confectionery"
+        "icon": "confectionery",
+        "googleMapsPlaceId": "ChIJJ7WjO49skFQR-4IwG2Zujgg"
       }
     },
     {
@@ -592,7 +604,8 @@
       "location": {
         "coordinates": [-122.20327420061356, 47.614656332873295],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJvzx1Z4ZskFQRXSqndURcCnE"
       }
     },
     {
@@ -610,11 +623,12 @@
       "location": {
         "coordinates": [-122.196601531137, 47.616048170798244],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJG0gY_ohskFQRlY2Phg2kC5Y"
       }
     },
     {
-      "name": "Me + Crêpe",
+      "name": "Me + Crêpe (Hi Duck)",
       "description": "If you've never had a \"Chinese Crepe\", this is a great place to try one.",
       "rating": 3,
       "lastVisit": "Q1 2025",
@@ -628,25 +642,8 @@
       "location": {
         "coordinates": [-122.2045027878739, 47.616030684270406],
         "bearing": "",
-        "icon": "restaurant"
-      }
-    },
-    {
-      "name": "Milk Bar",
-      "description": "The famous Milk Bar's slightly out-of-place stand in Bellevue offers sweet desserts that make you feel guilty for eating but secretly wanting for more.",
-      "rating": 3,
-      "lastVisit": "Q1 2025",
-      "recommended": [],
-      "links": [
-        {
-          "name": "Google Maps",
-          "value": "https://maps.app.goo.gl/SaVx8Nu8zEtbYQG38"
-        }
-      ],
-      "location": {
-        "coordinates": [-122.20449295095693, 47.617025242567685],
-        "bearing": "",
-        "icon": "confectionery"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJMR4G_9NtkFQR62AAZRNJLOQ"
       }
     },
     {
@@ -664,7 +661,8 @@
       "location": {
         "coordinates": [-122.20380980676923, 47.61062300424918],
         "bearing": "",
-        "icon": "cafe"
+        "icon": "cafe",
+        "googleMapsPlaceId": "ChIJSS1ZZOZtkFQRmSCWPAJN1h0"
       }
     },
     {
@@ -680,9 +678,10 @@
         }
       ],
       "location": {
-        "coordinates": [-122.20380980676923, 47.61062300424918],
+        "coordinates": [-122.19814590451193, 47.61239349557226],
         "bearing": "",
-        "icon": "cafe"
+        "icon": "cafe",
+        "googleMapsPlaceId": "ChIJ53F_VAltkFQRipS9qs_3Sls"
       }
     },
     {
@@ -700,7 +699,8 @@
       "location": {
         "coordinates": [-122.20302117187717, 47.6100959184269],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJx5Zt_X1skFQRiGO0IbDii1U"
       }
     },
     {
@@ -718,7 +718,8 @@
       "location": {
         "coordinates": [-122.20254815947432, 47.61062751055134],
         "bearing": "",
-        "icon": "cafe"
+        "icon": "cafe",
+        "googleMapsPlaceId": "ChIJeahpu0ltkFQRItNlPE0Wslc"
       }
     },
     {
@@ -736,7 +737,8 @@
       "location": {
         "coordinates": [-122.2017444, 47.6113583],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJi4-8Y4dskFQR4pJGupKSyeI"
       }
     },
     {
@@ -754,7 +756,8 @@
       "location": {
         "coordinates": [-122.19832780280585, 47.610408893340335],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJPSqPkIBskFQRmsGNt_p3msY"
       }
     },
     {
@@ -772,7 +775,8 @@
       "location": {
         "coordinates": [-122.20284919301244, 47.61007070715764],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJW9I35X1skFQR1R9xCQgu8Ew"
       }
     },
     {
@@ -790,7 +794,8 @@
       "location": {
         "coordinates": [-122.19598047771153, 47.61470757759535],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJg9iXUYhskFQRKlNujB26FfI"
       }
     },
     {
@@ -808,7 +813,8 @@
       "location": {
         "coordinates": [-122.2007815455322, 47.614406195666135],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJ1Vrrjo5tkFQRDRCWl3x3GGc"
       }
     },
     {
@@ -826,7 +832,8 @@
       "location": {
         "coordinates": [-122.20190193719465, 47.61637796336588],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJfckYPg5tkFQRJ4aBmyL5-oE"
       }
     },
     {
@@ -844,7 +851,8 @@
       "location": {
         "coordinates": [-122.19881180858192, 47.61190285263364],
         "bearing": "",
-        "icon": "bar"
+        "icon": "bar",
+        "googleMapsPlaceId": "ChIJA_BctI1tkFQRtkSTCPsUAK8"
       }
     },
     {
@@ -862,7 +870,8 @@
       "location": {
         "coordinates": [-122.20189657277693, 47.61647379012176],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJ3bYQeY53CEER9LMe4keT1yM"
       }
     },
     {
@@ -880,7 +889,8 @@
       "location": {
         "coordinates": [-122.19916458177548, 47.61299708386373],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJ6R7bJwBtkFQR-XiMLLqDGME"
       }
     },
     {
@@ -898,7 +908,8 @@
       "location": {
         "coordinates": [-122.2038936257962, 47.6108427064839],
         "bearing": "",
-        "icon": "cafe"
+        "icon": "cafe",
+        "googleMapsPlaceId": "ChIJh8pxUodskFQRsHwSCekCkgA"
       }
     },
     {
@@ -916,7 +927,8 @@
       "location": {
         "coordinates": [-122.19848273308816, 47.612432144532306],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJVZ5eLwBtkFQR6Yk1b1bX4hM"
       }
     },
     {
@@ -934,7 +946,8 @@
       "location": {
         "coordinates": [-122.19729907003078, 47.610580499584124],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJ51FrCH1skFQR79tZcn6itZ8"
       }
     },
     {
@@ -952,7 +965,8 @@
       "location": {
         "coordinates": [-122.19589806863536, 47.61114685142216],
         "bearing": "",
-        "icon": "cafe"
+        "icon": "cafe",
+        "googleMapsPlaceId": "ChIJiUE_MX1skFQRhjM-6vOdqyY"
       }
     },
     {
@@ -970,7 +984,8 @@
       "location": {
         "coordinates": [-122.19860343248703, 47.612676249624855],
         "bearing": "",
-        "icon": "restaurant"
+        "icon": "restaurant",
+        "googleMapsPlaceId": "ChIJs_fOaJZtkFQRsippZ733s7c"
       }
     },
     {
@@ -988,7 +1003,8 @@
       "location": {
         "coordinates": [-122.19800466812937, 47.611916237969496],
         "bearing": "",
-        "icon": "confectionery"
+        "icon": "confectionery",
+        "googleMapsPlaceId": "ChIJxb3QTFxtkFQRgjEekKCUg_o"
       }
     }
   ]
