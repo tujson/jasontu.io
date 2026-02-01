@@ -222,13 +222,6 @@
                 sectionElement.appendChild(linksElement);
 
                 document.getElementById("places").appendChild(sectionElement);
-
-                // Create marker for each place
-                const marker = createMarker(item);
-                markers.push({
-                  place: item,
-                  marker: marker
-                });
               });
 
               let activePlaceName = "";
@@ -267,44 +260,9 @@
               };
         });
       }
-
-      function createMarker(item) {
-        const position = {
-          lat: item.location.coordinates[1],
-          lng: item.location.coordinates[0]
-        };
-
-        // Create custom marker icon
-        const icon = {
-          url: item.location.icon ? item.location.icon + ".png" : "restaurant.png",
-          scaledSize: new google.maps.Size(20, 20),
-          origin: new google.maps.Point(0, 0),
-          anchor: new google.maps.Point(10, 25)
-        };
-
-        const marker = new google.maps.Marker({
-          position: position,
-          map: map,
-          title: item.name,
-          icon: icon,
-          optimized: false
-        });
-
-        // Add click event to marker
-        marker.addListener("click", () => {
-          // Open info window
-          infoWindow.setContent(`<div><strong>${item.name}</strong></div>`);
-          infoWindow.open(map, marker);
-          
-          // Scroll to section
-          document.getElementById(item.name).scrollIntoView();
-        });
-
-        return marker;
-      }
     </script>
 
-    <!-- Google Maps API -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAljk1mYw7_y0La5f2OGCnAEINY0v_YWV4&callback=initMap"></script>
+    <!-- Google Maps API with Places library -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZS3Grl1lIsBk7Y_N7HVaZOdPdG63JgG8&callback=initMap&libraries=places"></script>
   </body>
 </html>
