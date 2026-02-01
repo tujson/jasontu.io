@@ -248,11 +248,42 @@
                 sectionElement.appendChild(linksElement);
 
                 document.getElementById("places").appendChild(sectionElement);
+
+                // Create marker for each place
+                const marker = new google.maps.Marker({
+                  position: {
+                    lat: item["location"]["coordinates"][1],
+                    lng: item["location"]["coordinates"][0],
+                  },
+                  map: map,
+                  title: item.name,
+                  icon: getIconForType(item["location"]["icon"]),
+                });
+
+                // Create info window for marker
+                const infoWindowContent = `
+                  <div>
+                    <h4>${item.name}</h4>
+                  </div>
+                `;
+
+                // Add click listener to marker
+                marker.addListener("click", () => {
+                  infoWindow.setContent(infoWindowContent);
+                  infoWindow.open(map, marker);
+                  setActivePlace(item);
+                });
+
+                markers.push(marker);
               });
 
             let activePlaceName = "";
+            let isScrolling = false;
+            
             function setActivePlace(place) {
-              if (place["name"] === activePlaceName) return;
+              if (place["name"] === activePlaceName || isScrolling) return;
+
+              isScrolling = true;
 
               map.panTo({
                 lat: place["location"]["coordinates"][1],
@@ -271,6 +302,24 @@
                   .classList.remove("active");
               }
 
+              // Scroll to the place section in the left pane - get position relative to container
+              const section = document.getElementById(place["name"]);
+              const placesContainer = document.getElementById("places");
+              
+              // Get the position of the section relative to the scrollable container
+              const sectionPosition = section.offsetTop;
+              
+              // Debug info
+              console.log('Section offsetTop (relative to container):', sectionPosition);
+              
+              // Scroll the container to the section with padding
+              $("#places").animate({
+                scrollTop: sectionPosition - 20
+              }, 500, function() {
+                // Animation complete, reset flag
+                isScrolling = false;
+              });
+
               activePlaceName = place["name"];
             }
 
@@ -281,6 +330,8 @@
             }
 
             document.getElementById("places").onscroll = () => {
+              if (isScrolling) return; // Skip if we're already in a scroll operation
+              
               for (const place of data) {
                 if (isElementOnScreen(place["name"])) {
                   setActivePlace(place);
@@ -289,6 +340,26 @@
               }
             };
           });
+
+        // Function to get custom icon based on place type
+        function getIconForType(type) {
+          const iconBase = "./";
+          const iconSizes = {
+            restaurant: "restaurant.png",
+            cafe: "cafe.png",
+            bar: "bar.png",
+            confectionery: "confectionery.png",
+          };
+
+          return type && iconSizes[type]
+            ? {
+                url: iconBase + iconSizes[type],
+                scaledSize: new google.maps.Size(32, 32),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(16, 32),
+              }
+            : null; // Use default marker if type not recognized
+        }
       }
     </script>
 
